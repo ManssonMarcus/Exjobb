@@ -45,42 +45,11 @@
 						<div id="container" style="position: relative; width: 800px; height: 680px;"></div>
 						
 						
-						<div id ="slider-snap"></div>
+						<div id ="slider-snap" style="margin-top: 20px;"></div>
 						<p id="slider-snap-value-lower"></p>
 						<p id="slider-snap-value-upper"></p>
 
 						<script src="\js\mapController.js"></script>
-
-						<script>
-							var snapSlider = document.getElementById('slider-snap');
-
-							noUiSlider.create(snapSlider, {
-								start: [ 1600, 1700 ],
-								snap: true,
-								connect: true,
-								range: {
-									'min': 1500,
-									'15%':  1550,
-									'30%': 1600,
-									'45%': 1650,
-									'60%': 1700,
-									'75%': 1750,
-									'90%': 1800,
-									'95%': 1850,
-									'max': 1900
-								}
-							});
-
-							var snapValues = [
-								document.getElementById('slider-snap-value-lower'),
-								document.getElementById('slider-snap-value-upper')
-							];
-
-							snapSlider.noUiSlider.on('update', function( values, handle ) {
-								snapValues[handle].innerHTML = values[handle];
-								console.log(values[handle]);
-							});
-						</script>
 						
 					</section>
 

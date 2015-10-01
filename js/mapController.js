@@ -5,9 +5,9 @@ var zoom = new Datamap({
   // Zoom in on Africa
   setProjection: function(element) {
     var projection = d3.geo.equirectangular()
-      .center([23, -3])
+      .center([15.44, 57.7605])
       .rotate([4.4, 0])
-      .scale(200)
+      .scale(400)
       .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
     var path = d3.geo.path()
       .projection(projection);
@@ -41,31 +41,51 @@ var countryArray = [];
 var occurrences = [];
 var tempral = [];
 
-$.ajax({
-    //dataType: "json",
-    url: 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&x-api=lsh772&method=search&hitsPerPage=500&sort=serviceOrganization&startRecord='+40000+'&query=create_toTime%3E%3D1500+and+create_fromTime%3C%3D1900',
-    type: 'GET',
-    withCredentials: true,
-})
-.done(function(dataFromKsam) {
+function callData(lowerVal, upperVal) {
+	$.ajax({
+	    //dataType: "json",
+	    url: 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&x-api=lsh772&method=search&hitsPerPage=500&sort=serviceOrganization&startRecord='+500+'&query=create_toTime%3E%3D'+lowerVal+'+and+create_fromTime%3C%3D'+upperVal,
+	    type: 'GET',
+	    withCredentials: true,
+	})
+	.done(function(dataFromKsam) {
 
-		$.getJSON("data.json", function(json) {
-	    		
-				var array = [];
+		console.log(dataFromKsam);
 
-	    		for (var i = 0 ; i < 200 ; i++) {
-	    			array.push({name: json[i].CountryName, latitude: json[i].CapitalLatitude, longitude: json[i].CapitalLongitude, radius: 1});
-	    		}
-	    		
-	    		zoom.bubbles(array, {
-				 popupTemplate: function(geo, data) {
-				   return "<div class='hoverinfo'>Bubble for " + data.name + "";
-				 }
-				});
-		})
+		var hits = dataFromKsam.getElementsByTagName("totalHits")[0].childNodes[0].nodeValue;		
+		
+		for (var i = 0 ; i < 500 ; i++){
 
+			country = dataFromKsam.getElementsByTagName("countryName")[i];
+			museum = dataFromKsam.getElementsByTagName("serviceOrganization")[i].childNodes[0].nodeValue;
+			// place = dataFromKsam.getElementsByTagName("placeLabel")[i];
+			// year =  dataFromKsam.getElementsByTagName("timeLabel")[i];
+			// description = dataFromKsam.getElementsByTagName("desc")[i];
 
-	function plot(occ){
+			if (country) {
+				//workaround for checking if value exists in object-Array
+				if (tempral.indexOf(country.childNodes[0].nodeValue) == -1) {
+						occurrences.push({place: country.childNodes[0].nodeValue, value: 1});
+						tempral.push(country.childNodes[0].nodeValue);
+				}	
+				else {
+					occurrences[tempral.indexOf(country.childNodes[0].nodeValue)].value++;
+				}		
+			}
+			if (i+1 == 500) {
+				tempral = [];
+				plot(occurrences, museum);
+				occurrences = [];
+			}
+		}
+
+	}).fail(function(req) {	
+		console.log("err");
+	});
+
+}
+
+	function plot(occ, museum){
 		$.getJSON("data.json", function(json) {
 	    		
 				var array = [];
@@ -80,39 +100,37 @@ $.ajax({
 	    		
 	    		zoom.bubbles(array, {
 				 popupTemplate: function(geo, data) {
-				   return "<div class='hoverinfo'>Bubble for " + data.name + "";
+				   return "<div class='hoverinfo'>Bubble for " + museum + "";
 				 }
 				});
 		});
 	}
 
-	var hits = dataFromKsam.getElementsByTagName("totalHits")[0].childNodes[0].nodeValue;		
-	
-	for (var i = 0 ; i < 500 ; i++){
+var snapSlider = document.getElementById('slider-snap');
 
-		country = dataFromKsam.getElementsByTagName("countryName")[i];
-		// museum = dataFromKsam.getElementsByTagName("serviceOrganization")[i];
-		// place = dataFromKsam.getElementsByTagName("placeLabel")[i];
-		// year =  dataFromKsam.getElementsByTagName("timeLabel")[i];
-		// description = dataFromKsam.getElementsByTagName("desc")[i];
-
-		if (country) {
-			//workaround for checking if value exists in object-Array
-			if (tempral.indexOf(country.childNodes[0].nodeValue) == -1) {
-					occurrences.push({place: country.childNodes[0].nodeValue, value: 1});
-					tempral.push(country.childNodes[0].nodeValue);
-			}	
-			else {
-				occurrences[tempral.indexOf(country.childNodes[0].nodeValue)].value++;
-			}		
-		}
-		if (i+1 == 500) {
-			plot(occurrences);
-		}
+noUiSlider.create(snapSlider, {
+	start: [ 1600, 1700 ],
+	snap: true,
+	connect: true,
+	range: {
+		'min': 1500,
+		'15%':  1550,
+		'30%': 1600,
+		'45%': 1650,
+		'60%': 1700,
+		'75%': 1750,
+		'90%': 1800,
+		'95%': 1850,
+		'max': 1900
 	}
-
-}).fail(function(req) {	
-	console.log("err");
 });
 
+var snapValues = [
+	document.getElementById('slider-snap-value-lower'),
+	document.getElementById('slider-snap-value-upper')
+];
 
+snapSlider.noUiSlider.on('update', function( values, handle ) {
+	callData(values[0], values[1]);
+	snapValues[handle].innerHTML = values[handle];
+});
