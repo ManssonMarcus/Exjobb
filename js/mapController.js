@@ -1,3 +1,5 @@
+
+
 var zoom = new Datamap({
   element: document.getElementById("container"),
   responsive: true,
@@ -20,7 +22,7 @@ var zoom = new Datamap({
     gt500: "#55F"
     
   },
-  data: {
+  data: { 
     'ZAF': { fillKey: 'gt50' },
     'ZWE': { fillKey: 'lt25' },
     'NGA': { fillKey: 'lt50' },
@@ -50,7 +52,7 @@ function callData(lowerVal, upperVal) {
 	})
 	.done(function(dataFromKsam) {
 
-		console.log(dataFromKsam);
+	
 
 		var hits = dataFromKsam.getElementsByTagName("totalHits")[0].childNodes[0].nodeValue;		
 		

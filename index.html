@@ -50,6 +50,34 @@
 						<p id="slider-snap-value-upper"></p>
 
 						<script src="\js\mapController.js"></script>
+
+							<button id="b">export to CSV</button>
+						    
+						    <script type="text/javascript">
+						  		
+						  		var myCsv = "";
+
+						  		$.ajax({
+								    //dataType: "json",
+								    url: 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&x-api=lsh772&method=search&hitsPerPage=500&sort=serviceOrganization&startRecord='+1+'&query=create_toTime%3E%3D'+1500+'+and+create_fromTime%3C%3D'+1900,
+								    type: 'GET',
+								    withCredentials: true,
+								})
+								.done(function(testData) {
+
+									myCsv = testData.getElementsByTagName("countryName")[0].childNodes[0].nodeValue;
+
+								}).fail(function(req) {	
+									console.log("err");
+								});
+						        function exportToCsv() {
+
+						            window.open('data:text/csv;charset=utf-8,' + escape(myCsv));
+						        }
+
+						        var button = document.getElementById('b');
+						        button.addEventListener('click', exportToCsv);
+						    </script>
 						
 					</section>
 
