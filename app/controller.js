@@ -21,16 +21,60 @@
 
     $scope.featureList = ["Responsive navigation", "SASS support including sourceMaps", "Minimal CSS styling of the view"];
 
+    //////////// CALL all data on first load.
+
+  
+        $.ajax({
+          //dataType: "json",
+          url: 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&recordSchema=presentation&x-api=lsh772&method=search&hitsPerPage=500&sort=countryName&startRecord='+1+'&query=create_toTime%3E%3D'+ 1500 +'+and+create_fromTime%3C%3D'+1900,
+          type: 'GET',
+          withCredentials: true,
+      })
+      .done(function(data) {
+        console.log(data);
+
+      }).fail(function(req) { 
+        console.log("err");
+      });
 
 
+  /*  
+    allData = [];
 
+    for (var i = 1500 ; i <= 1900; i = i+50) {
+      $.ajax({
+          //dataType: "json",
+          url: 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&recordSchema=presentation&x-api=lsh772&method=search&hitsPerPage=500&sort=serviceOrganization&startRecord='+1+'&query=create_toTime%3E%3D'+ i +'+and+create_fromTime%3C%3D'+(i+50),
+          type: 'GET',
+          withCredentials: true,
+      })
+      .done(function(data) {
+
+        for (var j = 0 ; j < 100 ; j++) {
+
+          country = data.getElementsByTagName("countryName")[j].childNodes[0].nodeValue;
+
+          allData.push({"country": country , "yearFrom": i});
+
+        };
+
+        console.log(data);
+        console.log(allData);
+
+      }).fail(function(req) { 
+        console.log("err");
+      });
+    };
+
+*/
     ////////////  function definitions
     
    var zoom = new Datamap({
   element: document.getElementById("mapContainer"),
   responsive: true,
   scope: 'world',
-  // Zoom in on Africa
+
+  // Zoom in on europe
   setProjection: function(element) {
     var projection = d3.geo.equirectangular()
       .center([15.44, 57.7605])
@@ -78,7 +122,6 @@ function callData(lowerVal, upperVal) {
   })
   .done(function(dataFromKsam) {
 
-    console.log(dataFromKsam);
 
     var hits = dataFromKsam.getElementsByTagName("totalHits")[0].childNodes[0].nodeValue;   
     
