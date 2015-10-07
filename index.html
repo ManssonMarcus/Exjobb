@@ -51,28 +51,54 @@
 
 						<script src="\js\mapController.js"></script>
 
-							<button id="b">export to CSV</button>
+							<button id="b">export to json-5t1ng1f13d</button>
 						    
 						    <script type="text/javascript">
 						  		
-						  		var myCsv = "";
+						  		var myCsvArray = [];
+						  		var temp = [];
 
-						  		$.ajax({
-								    //dataType: "json",
-								    url: 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&x-api=lsh772&method=search&hitsPerPage=500&sort=serviceOrganization&startRecord='+1+'&query=create_toTime%3E%3D'+1500+'+and+create_fromTime%3C%3D'+1900,
-								    type: 'GET',
-								    withCredentials: true,
-								})
-								.done(function(testData) {
+						  		for (var j = 0; j < 113500 ; j = j + 500) {
 
-									myCsv = testData.getElementsByTagName("countryName")[0].childNodes[0].nodeValue;
 
-								}).fail(function(req) {	
-									console.log("err");
-								});
+							  		$.ajax({
+									    //dataType: "json",
+									    url: 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&x-api=lsh772&method=search&hitsPerPage=500&sort=toTime&startRecord='+j+'&query=create_toTime%3E%3D'+1851+'+and+create_fromTime%3C%3D'+1900,
+									    type: 'GET',
+									    withCredentials: true,
+									})
+									.done(function(testData) {
+
+										console.log("count:");
+
+										for (var i = 0; i < 500; i++) {
+											//console.log("second loop: "+i);
+											myCsvCountry = testData.getElementsByTagName("countryName")[i];	
+
+											if (myCsvCountry ) {
+												
+												if (temp.indexOf(myCsvCountry.childNodes[0].nodeValue) == -1) {
+													myCsvArray.push({"placeName" : myCsvCountry.childNodes[0].nodeValue, "yearInterval" : [1850,1900], amount: 1});	
+													temp.push(myCsvCountry.childNodes[0].nodeValue);	
+												}
+												else {
+													myCsvArray[temp.indexOf(myCsvCountry.childNodes[0].nodeValue)].amount++;
+												}
+											}	
+					
+										};
+										
+
+
+									}).fail(function(req) {	
+										console.log("err");
+									});
+								};
+
 						        function exportToCsv() {
 
-						            window.open('data:text/csv;charset=utf-8,' + escape(myCsv));
+						            console.log(myCsvArray);
+						            window.open('data:text/csv;charset=utf-8,' + escape(JSON.stringify(myCsvArray)));
 						        }
 
 						        var button = document.getElementById('b');
