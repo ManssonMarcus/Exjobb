@@ -79,7 +79,7 @@
     var projection = d3.geo.equirectangular()
       .center([15.44, 57.7605])
       .rotate([4.4, 0])
-      .scale(400)
+      .scale(200)
       .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
     var path = d3.geo.path()
       .projection(projection);
@@ -113,79 +113,53 @@ var countryArray = [];
 var occurrences = [];
 var tempral = [];
 
-function callData(lowerVal, upperVal) {
-  $.ajax({
-      //dataType: "json",
-      url: 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&x-api=lsh772&method=search&hitsPerPage=500&sort=serviceOrganization&startRecord='+500+'&query=create_toTime%3E%3D'+lowerVal+'+and+create_fromTime%3C%3D'+upperVal,
-      type: 'GET',
-      withCredentials: true,
-  })
-  .done(function(dataFromKsam) {
-
-
-    var hits = dataFromKsam.getElementsByTagName("totalHits")[0].childNodes[0].nodeValue;   
-    
-    for (var i = 0 ; i < 500 ; i++){
-
-      country = dataFromKsam.getElementsByTagName("countryName")[i];
-      museum = dataFromKsam.getElementsByTagName("serviceOrganization")[i].childNodes[0].nodeValue;
-      // place = dataFromKsam.getElementsByTagName("placeLabel")[i];
-      // year =  dataFromKsam.getElementsByTagName("timeLabel")[i];
-      // description = dataFromKsam.getElementsByTagName("desc")[i];
-
-      if (country) {
-        //workaround for checking if value exists in object-Array
-        if (tempral.indexOf(country.childNodes[0].nodeValue) == -1) {
-            occurrences.push({place: country.childNodes[0].nodeValue, value: 1});
-            tempral.push(country.childNodes[0].nodeValue);
-        } 
-        else {
-          occurrences[tempral.indexOf(country.childNodes[0].nodeValue)].value++;
-        }   
+function callData(val) {
+  tempArray = [];
+  $.getJSON("geoYearData/all.json", function(json) {
+    for (var i = 0 ; i < json.length ; i++){
+      if(val == json[i].yearInterval[0] && json[i].placeName != "Sverige") {
+          tempArray.push(json[i]);
       }
-      if (i+1 == 500) {
-        tempral = [];
-        plot(occurrences, museum);
-        occurrences = [];
+      if (i+1 == json.length) {
+        plot(tempArray);
       }
     }
-
-  }).fail(function(req) { 
-    console.log("err");
   });
 
 }
 
-  function plot(occ, museum){
+  function plot(occ){
     $.getJSON("data.json", function(json) {
           
         var array = [];
 
           for (var i = 0 ; i < json.length ; i++) {
             for (var j = 0 ; j < occ.length ; j++){
-              if (json[i].CountryName == occ[j].place) {
-                array.push({name: json[i].CountryName, latitude: json[i].CapitalLatitude, longitude: json[i].CapitalLongitude, radius: occ[j].value/2});
+              if (json[i].CountryName == occ[j].placeName) {
+                array.push({name: json[i].CountryName, latitude: json[i].CapitalLatitude, longitude: json[i].CapitalLongitude, radius: occ[j].amount/2});
               }
             }
           }
           
           zoom.bubbles(array, {
          popupTemplate: function(geo, data) {
-           return "<div class='hoverinfo'>Bubble for " + museum + "";
+           return "<div class='hoverinfo'>Bubble for " + "";
          }
         });
     });
   }
 
+
+
 var snapSlider = document.getElementById('slider-snap');
 
 noUiSlider.create(snapSlider, {
-  start: [ 1600, 1700 ],
+  start: 1500,
   snap: true,
-  connect: true,
+  connect: false,
   range: {
     'min': 1500,
-    '15%':  1550,
+    '15%': 1550,
     '30%': 1600,
     '45%': 1650,
     '60%': 1700,
@@ -202,8 +176,9 @@ var snapValues = [
 ];
 
 snapSlider.noUiSlider.on('update', function( values, handle ) {
-  callData(values[0], values[1]);
-  snapValues[handle].innerHTML = values[handle];
+  val = parseInt(values[0]);
+  callData(val);
+  snapValues[handle].innerHTML = val+"-"+ (val+50);
 });
     /**
      * Load some data
