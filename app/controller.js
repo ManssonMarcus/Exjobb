@@ -87,11 +87,16 @@
     return {path: path, projection: projection};
   },
   fills: {
-    defaultFill: "#ABDDA4",
-    gt50: "#FA1",
-    gt500: "#55F"
-    
-  },
+        'USA': '#1f77b4',
+        'RUS': '#9467bd',
+        'PRK': '#ff7f0e',
+        'PRC': '#2ca02c',
+        'IND': '#e377c2',
+        'GBR': '#8c564b',
+        'FRA': '#d62728',
+        'PAK': '#7f7f7f',
+        defaultFill: '#44DC55'
+    },
   data: { 
     'ZAF': { fillKey: 'gt50' },
     'ZWE': { fillKey: 'lt25' },
@@ -115,9 +120,9 @@ var tempral = [];
 
 function callData(val) {
   tempArray = [];
-  $.getJSON("geoYearData/all.json", function(json) {
+  $.getJSON("geoYearData/LSH/allLSHUtanSvea.json", function(json) {
     for (var i = 0 ; i < json.length ; i++){
-      if(val == json[i].yearInterval[0] && json[i].placeName != "Sverige") {
+      if(val == json[i].yearInterval[0]) {
           tempArray.push(json[i]);
       }
       if (i+1 == json.length) {
@@ -133,20 +138,23 @@ function callData(val) {
           
         var array = [];
 
+
           for (var i = 0 ; i < json.length ; i++) {
             for (var j = 0 ; j < occ.length ; j++){
-              if (json[i].CountryName == occ[j].placeName) {
-                array.push({name: json[i].CountryName, latitude: json[i].CapitalLatitude, longitude: json[i].CapitalLongitude, radius: occ[j].amount/2});
+              if (json[i].CountryName.toLowerCase() == occ[j].placeName.toLowerCase()) {
+                array.push({name: json[i].CountryName, fillKey: 'RUS', latitude: json[i].CapitalLatitude, longitude: json[i].CapitalLongitude, radius: occ[j].amount*2});
+              
               }
             }
           }
           
-          zoom.bubbles(array, {
-         popupTemplate: function(geo, data) {
-           return "<div class='hoverinfo'>Bubble for " + "";
-         }
-        });
+      zoom.bubbles(array, {
+        popupTemplate: function(geo, data) {
+          return "<div class='hoverinfo'>Bubble for " + "array.countryName";
+        }
+      });
     });
+
   }
 
 
