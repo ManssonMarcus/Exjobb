@@ -11,6 +11,13 @@
         <div id ="slider-snap" style="margin-top: 20px;"></div>
         <p id="slider-snap-value-lower"></p>
         <p id="slider-snap-value-upper"></p>
+
+    
+        <div ng-init="value='all'">
+            <p><input type="radio" ng-model="value" value="all" ng-change='newValue(value)'> Alla museum</p>
+            <p><input type="radio" ng-model="value" value="LSH" ng-change='newValue(value)'> Endast LSH</p>
+        </div>
+
     </div>
 
 </div>
