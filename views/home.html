@@ -1,24 +1,29 @@
-<h2 class="text-center">AngularJS Boilerplate</h2>
+<h1>Karta mother fucker</h1>
 
-<!-- slider directive -->
-
-<h3>Features</h3>
 <div class="container cf">
     <div>
-       <li data-ng-repeat="feature in featureList">{{feature}}</li> 
-        <h2>Vi testar en karta här: </h2>
-        <div id="mapContainer" style="margin-left:60px; width: 800px; height: 680px;"></div>
+        <div id="mapContainer" style="width: 100%;"></div>
         <div id ="slider-snap" style="margin-top: 20px;"></div>
-        <p id="slider-snap-value-lower"></p>
-        <p id="slider-snap-value-upper"></p>
+        <h2 id="slider-snap-value-lower"></h2>
+        <h2 id="slider-snap-value-upper"></h2>
+        <p id ="textId"></p>
 
-    
-        <div ng-init="value='all'">
-            <p><input type="radio" ng-model="value" value="all" ng-change='newValue(value)'> Alla museum</p>
-            <p><input type="radio" ng-model="value" value="LSH" ng-change='newValue(value)'> Endast LSH</p>
+        <div style="width: 100%; overflow: hidden; ">
+            <div ng-init="value='all'" style="width: 300px; float:left;  border: 1px solid red;">
+                <p><input type="radio" ng-model="value" value="all" ng-change='newValue(value)'> Alla museum</p>
+                <p><input type="radio" ng-model="value" value="LSH" ng-change='newValue(value)'> Endast LSH</p>
+            </div>
+            <div ng-init="" style="border: 1px solid green; float: left;">
+                <p><input type="checkbox" ng-model="value" value="wepon" ng-change=''> Vapen</p>
+                <p><input type="checkbox" ng-model="value" value="costume" ng-change=''> Dräkter</p>
+            </div>
+            <div ng-init="" style="border: 1px solid blue; float: left;">
+                <p><input type="checkbox" ng-model="value" value="art" ng-change=''> Konst & hantverk</p>
+                <p><input type="checkbox" ng-model="value" value="armour" ng-change=''> Rustningar</p>
+            </div>
         </div>
-
     </div>
+
 
 </div>
 <div class="text-center">
