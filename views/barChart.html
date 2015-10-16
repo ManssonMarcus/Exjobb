@@ -1,0 +1,22 @@
+<div class="container cf">
+    <div>
+       <h2>Tillverkat stuff i Sverige per land över årtal</h2>
+       
+ 		<div class="graph" style="width:70%"></div>
+ 		
+		<div ng-repeat="field in data.fields">
+		</div>
+
+ 		<div ng-init="newCountries"></div>
+
+		<label>Search: 
+			<input ng-model="searchText">
+			<input type="button" ng-click="doSomething()" value="Send" ng-disabled="searchText == null" />
+		</label>
+		<table id="searchTextResults">
+		  <tr ng-repeat="country in newCountries | filter:searchText">
+		    <td>{{country.placeName}}</td>
+		  </tr>
+		</table>
+    </div>
+</div>

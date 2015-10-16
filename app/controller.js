@@ -138,7 +138,7 @@
         for (var i = 0 ; i < json.length ; i++) {
           for (var j = 0 ; j < occ.length ; j++){
             if (json[i].CountryName.toLowerCase() == occ[j].placeName.toLowerCase()) {
-              array.push({name: json[i].CountryName, fillKey: 'RUS', latitude: json[i].CapitalLatitude, longitude: json[i].CapitalLongitude, radius: occ[j].amount});
+              array.push({name: json[i].CountryName, fillKey: 'RUS', latitude: json[i].CapitalLatitude, longitude: json[i].CapitalLongitude, radius: 10});
             }
           }
         }     

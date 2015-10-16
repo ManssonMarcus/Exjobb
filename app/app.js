@@ -53,6 +53,10 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
+      .when('/barChart', {
+        templateUrl: 'views/barChart.html',
+        controller: 'barController',
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -106,8 +110,10 @@
   run.$inject = ['$rootScope', '$location'];
 
   function run($rootScope, $location) {
+    
 
     // put here everything that you need to run on page load
+
 
   }
 
