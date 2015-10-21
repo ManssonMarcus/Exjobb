@@ -13,7 +13,7 @@
 
 
 	    $scope.doSomething = function () {
-		  	$.getJSON("geoYearData/utanSvea.json", function(json) {
+		  	$.getJSON("geoData/all.json", function(json) {
 		    	getRightCountry(json, $scope.searchText);
 		    	$scope.newCountries = json;
 		    	console.log($scope.newCountries);

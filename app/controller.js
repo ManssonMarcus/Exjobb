@@ -21,7 +21,9 @@
     // Local variables
     var alljson = [];
     var LSHjson = [];
+    var weaponjson = [];
     var thejson = [];
+    var materialArray = [];
     var startYear;
     var snapSlider = document.getElementById('slider-snap');
     var snapValues = [
@@ -39,14 +41,39 @@
     var eighthText = "";
     
 
+
+    
+   
+
     //get datasets for all museums & LSH
     $.getJSON("geoYearData/LSH/allLSHUtanSvea.json", function(json) {
       LSHjson = json;
     });
-    $.getJSON("geoYearData/utanSvea.json", function(json) {
+    $.getJSON("geoData/weapon.json", function(json) {
+      weaponjson = json;
+      getMaterials(weaponjson);
+    });
+    $.getJSON("geoData/all.json", function(json) {
       alljson = json;
       thejson = json;
+
+      
     });
+    
+    
+    //function to get materials and put in the dropdown
+    function getMaterials(array) {
+      for (var i = 0 ; i < array.length ; i++)  {
+        var theMaterialArray = array[i].materialArray  
+        for (var j = 0 ; j < array[i].materialArray.length ; j++) {
+          var theMaterial = theMaterialArray[j].material;
+          if (materialArray.indexOf(theMaterial) == -1){
+            materialArray.push(theMaterial);
+          }
+        } 
+      }
+      $scope.numbers = materialArray;
+    }
 
 
     //get texts for yearspans
@@ -85,7 +112,7 @@
       responsive: true,
       scope: 'world',
 
-      // Zoom in on europe
+      // Zoom in ór out
       setProjection: function(element) {
         var projection = d3.geo.equirectangular()
           .center([15.44, 57.7605])
@@ -112,8 +139,12 @@
         thejson = LSHjson;
         setPlotYear(startYear);
       }
-      else {
+      else if (value == "all"){
         thejson = alljson;
+        setPlotYear(startYear);
+      }
+      else if (value == "weapon"){
+        thejson = weaponjson;
         setPlotYear(startYear);
       }
     }

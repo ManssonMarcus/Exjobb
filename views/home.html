@@ -1,4 +1,4 @@
-<h1>Karta mother fucker</h1>
+<h2>Karta mother fucker</h2>
 
 <div class="container cf">
     <div>
@@ -9,24 +9,35 @@
         <p id ="textId"></p>
 
         <div style="width: 100%; overflow: hidden; ">
-            <div ng-init="value='all'" style="width: 300px; float:left;  border: 1px solid red;">
+            <div ng-init="value='all'" style="width: 300px; float:left;  border: 0px solid red;">
                 <p><input type="radio" ng-model="value" value="all" ng-change='newValue(value)'> Alla museum</p>
                 <p><input type="radio" ng-model="value" value="LSH" ng-change='newValue(value)'> Endast LSH</p>
             </div>
-            <div ng-init="" style="border: 1px solid green; float: left;">
-                <p><input type="checkbox" ng-model="value" value="wepon" ng-change=''> Vapen</p>
-                <p><input type="checkbox" ng-model="value" value="costume" ng-change=''> Dräkter</p>
+            <div ng-init="" style="border: 0px solid blue; float: left; margin-right: 20px;">
+                <p><input type="radio" ng-model="value" value="allArtefacts" ng-change=''> Alla artefakter </p>
             </div>
-            <div ng-init="" style="border: 1px solid blue; float: left;">
-                <p><input type="checkbox" ng-model="value" value="art" ng-change=''> Konst & hantverk</p>
-                <p><input type="checkbox" ng-model="value" value="armour" ng-change=''> Rustningar</p>
+            <div ng-init="" style="border: 0px solid green; float: left; margin-right: 20px;">
+                <p><input type="radio" ng-model="value" value="weapon" ng-change='newValue(value)'> Vapen </p>
+                <p><input type="radio" ng-model="value" value="clothes" ng-change=''>Kläder </p>
             </div>
+            <div ng-init="" style="border: 0px solid blue; float: left; margin-right: 20px;">
+                <p><input type="radio" ng-model="value" value="art" ng-change=''> Konst & hantverk </p>
+                <p><input type="radio" ng-model="value" value="armour" ng-change=''> Rustningar </p>
+            </div>
+            <div ng-init="" style="border: 0px solid blue; float: left; margin-right:50px;">
+                <p><input type="radio" ng-model="value" value="art" ng-change=''> Möbler </p>
+                <p><input type="radio" ng-model="value" value="armour" ng-change=''> Tyg </p>
+            </div>
+            <div>
+                 <select style="width:15%" ng-model='selectedNumber'  ng-options='number for number in numbers'></select>
+                 <button ng-click="add()">add</button>
+            </div>
+            
+
         </div>
     </div>
 
 
 </div>
-<div class="text-center">
-    <small>Images courtesy of <a target="_blank" href="http://unsplash.com">unsplash.com</a></small>
-</div>
+
 
