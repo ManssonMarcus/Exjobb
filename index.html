@@ -29,120 +29,284 @@
 	<body id="top">
 
 		<!-- Header -->
-			<header id="header">
+			<!--header id="header">
 				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 				<h1><strong>I am Strata</strong>, a super simple<br />
 				responsive site template freebie<br />
 				crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1>
-			</header>
+			</header-->
 
 		<!-- Main -->
 			<div id="main">
 
 				<!-- One -->
 					<section id="one">
-						<h2>Vi testar en karta här: </h2>
-						<div id="container" style="position: relative; width: 800px; height: 680px;"></div>
+						<h2>Hämta data</h2>
+						<!--div id="container" style="position: relative; width: 800px; height: 680px;"></div-->
 						
 						
-						<div id ="slider-snap" style="margin-top: 20px;"></div>
+						<!--div id ="slider-snap" style="margin-top: 20px;"></div>
 						<p id="slider-snap-value-lower"></p>
-						<p id="slider-snap-value-upper"></p>
+						<p id="slider-snap-value-upper"></p-->
 
-						<script src="\js\mapController.js"></script>
+						<!--script src="\js\mapController.js"></script-->
+							<select id="ddlViewBy" style="width: 200px; margin-bottom: 20px;">
+							  <option value="1500">1500-1550</option>
+							  <option value="1550">1550-1600</option>
+							  <option value="1600">1600-1650</option>
+							  <option value="1650">1650-1700</option>
+							  <option value="1700">1700-1750</option>
+							  <option value="1750">1750-1800</option>
+							  <option value="1800">1800-1850</option>
+							  <option value="1850">1850-1900</option>
+							</select>
+							<select id="artefakt" style="width: 200px; margin-bottom: 20px;">
+							  <option value="allt">Alla</option>
+							  <option value="kläder">dräkt</option>
+							  <option value="möbler">möbler</option>
+							  <option value="konst">konst</option>
+							  <option value="tyg">tyg</option>
+							  <option value="rustningar">rustningar</option>
+							  <option value="vapen">vapen</option>
+							</select>
+							<button class="button" id="setIt">Set Specifics</button>
+							<button class="button" id="getIt" disabled>Get Data</button>
+							<button class="button" id="b" disabled>export to json-5t1ng1f13d</button>
 
-							<button id="b">export to json-5t1ng1f13d</button>
-						    
+						    <h1 id="demo" style="color: #52FF6B; visibility: hidden">done</h1>
+						    <h1 id="demoWait" style="color: #B2163C; visibility: hidden">waiting...</h1>
 						    <script type="text/javascript">
+
+						    	var button = document.getElementById('b');
+						        button.addEventListener('click', exportToJson);
+
+						        var buttonGet = document.getElementById('getIt');
+						        buttonGet.addEventListener('click', getData);
+
+						        var buttonSet = document.getElementById('setIt');
+						        buttonSet.addEventListener('click', setSpecifics);
 						  		
-						  		var myCsvArray = [];
-						  		var temp = [];
+						  		var placeArray = [];
+						  		var theBigHits;
+						  		var yearFrom;
+								var yearTo;
+								var hits; 	
+								var URLen1;
+								var URLen2;
 
-						  		for (var j = 0; j < 113500 ; j = j + 500) {
+						  		function setSpecifics() {
 
+						  			var e = document.getElementById("ddlViewBy");
+									var dropDownYear = e.options[e.selectedIndex].value;
 
+									var p = document.getElementById("artefakt");
+									var artefakt = p.options[p.selectedIndex].value;
+
+									startYear = parseInt(dropDownYear);
+									endYear = startYear + 50;
+
+						  			document.getElementById("b").disabled = true;
+						  			console.log(artefakt);
+							  		
+							  		yearFrom = startYear;
+								  	yearTo = endYear;
+								  	
+									if (startYear == 1800 || startYear == 1850 ) {
+									 	if (artefakt == "allt") {
+									  		hits = 500;
+									  	}
+									  	else {
+									  		hits = 100;
+									  	}	
+									}
+									else if (startYear == 1750) {
+									  	if (artefakt == "allt") {
+									  		hits = 500;
+									  	}
+									  	else {
+									  		hits = 100;
+									  	}
+									}
+								  	else {
+								  		hits = 100;	
+								  	}
+
+								  	if (artefakt == "allt") {
+								  		URLen1 = 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&x-api=lsh772&method=search&hitsPerPage='+hits+'&sort=toTime&startRecord=';
+								  		URLen2 = '&query=create_toTime%3E%3D'+yearFrom+'+and+create_fromTime%3C%3D'+yearTo;
+								  	}
+								  	else {
+								  		URLen1 = 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&x-api=lsh772&method=search&hitsPerPage='+hits+'&sort=toTime&startRecord=';
+								  		URLen2 =  '&query=item%3D%22'+artefakt+'%22+and+create_toTime%3E%3D'+yearFrom+'+and+create_fromTime%3C%3D'+yearTo;
+								  	}
+								  	
 							  		$.ajax({
-									    //dataType: "json",
-									    url: 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&x-api=lsh772&method=search&hitsPerPage=500&sort=toTime&startRecord='+j+'&query=create_toTime%3E%3D'+1851+'+and+create_fromTime%3C%3D'+1900,
-									    type: 'GET',
-									    withCredentials: true,
-									})
-									.done(function(testData) {
+										    //dataType: "json",
+										    url: URLen1+0+URLen2,
+										    type: 'GET',
+										    withCredentials: true,
+										})
+										.done(function(theData) {
+											
+											var theHits = theData.getElementsByTagName("totalHits")[0].childNodes[0].nodeValue;
+											theBigHits = Math.floor(theHits/hits)*hits;
+											if (theBigHits < 100) {
+												hits = (theHits -1);
+												theBigHits = theHits;
+											}
+											document.getElementById("getIt").disabled = false;
 
-										console.log("count:");
 
-										for (var i = 0; i < 500; i++) {
-											//console.log("second loop: "+i);
-											myCsvCountry = testData.getElementsByTagName("countryName")[i];	
+										}).fail(function(req) {	
+											console.log("err");
+										});
+								}
 
-											if (myCsvCountry ) {
+								function getData() {
+									console.log(hits);
+									console.log(theBigHits);
+
+									document.getElementById("b").disabled = true;
+									document.getElementById("getIt").disabled = true;
+									document.getElementById("demoWait").style.visibility = "visible";
+									document.getElementById("demo").style.visibility = "hidden";
+
+									console.log("yearspan: "+yearFrom+" "+yearTo);
+
+									console.log("get");
+									var counter = 0;
+
+							  		for (var j = 0; j < theBigHits ; j = j + hits) {
+							  			
+
+								  		$.ajax({
+										    //dataType: "json",
+										    url: URLen1+j+URLen2,
+										    type: 'GET',
+										    withCredentials: true,
+										})
+										.done(function(testData) {
+
+											//console.log(testData);
+											
+											for (var i = 0; i < hits; i++) {
+
+												counter++;
+												console.log("count"+" "+theBigHits);
 												
-												if (temp.indexOf(myCsvCountry.childNodes[0].nodeValue) == -1) {
-													myCsvArray.push({"placeName" : myCsvCountry.childNodes[0].nodeValue, "yearInterval" : [1850,1900], amount: 1});	
-													temp.push(myCsvCountry.childNodes[0].nodeValue);	
+												myCountry = testData.getElementsByTagName("countryName")[i];	
+												institution = testData.getElementsByTagName("serviceOrganization")[i].childNodes[0].nodeValue;
+												material = testData.getElementsByTagName("material")[i];
+
+
+												if (myCountry) {
+													//if (institution == 'Livrustkammaren' || institution == 'Skoklosters slott' || institution == 'Livrustkammaren') {
+														
+														if (containsCountry(myCountry.childNodes[0].nodeValue.toLowerCase(), placeArray) == -1) {
+		
+															if (material && material.childNodes[0]) {
+																materialValue = material.childNodes[0].nodeValue.toLowerCase();
+																placeArray.push({
+																					"placeName" : myCountry.childNodes[0].nodeValue.toLowerCase(), 
+																					"yearInterval" : [yearFrom, yearTo], 
+																					"amount" : 1, 
+																					"materialArray" : [{"material" : materialValue, "materialAmount" : 1 }]
+																				});	
+
+															}
+															else {
+																placeArray.push({
+																					"placeName" : myCountry.childNodes[0].nodeValue.toLowerCase(), 
+																					"yearInterval" : [yearFrom, yearTo], 
+																					"amount" : 1, 
+																					"materialArray" : []
+																				});
+															}
+																
+															 
+														}
+														else {
+															var placeInArr = containsCountry(myCountry.childNodes[0].nodeValue.toLowerCase(), placeArray);
+															placeArray[placeInArr].amount++;
+															 if (material && material.childNodes[0]) {
+																materialVal = material.childNodes[0].nodeValue.toLowerCase();
+																if (containsMaterial(materialVal, placeArray[placeInArr].materialArray) == -1) {
+
+																	placeArray[placeInArr].materialArray.push({"material" : materialVal, "materialAmount" : 1 });
+																}
+																else {
+																	placeArray[placeInArr].materialArray[containsMaterial(materialVal, placeArray[placeInArr].materialArray)].materialAmount++;
+																}
+
+															} 
+														}
+													//}	
 												}
-												else {
-													myCsvArray[temp.indexOf(myCsvCountry.childNodes[0].nodeValue)].amount++;
+												if (counter == theBigHits) {
+													document.getElementById("demoWait").style.visibility = "hidden"; 
+													document.getElementById("demo").style.visibility = "visible";
+													document.getElementById("b").disabled = false;
+													document.getElementById("getIt").disabled = false;
 												}
-											}	
-					
-										};
+											 
+											};
+
+											
+
+
+										}).fail(function(req) {	
+											alert("err, refresh and try again");
+										});
+
 										
+									};
+								}
 
-
-									}).fail(function(req) {	
-										console.log("err");
-									});
-								};
-
-						        function exportToCsv() {
-
-						            console.log(myCsvArray);
-						            window.open('data:text/csv;charset=utf-8,' + escape(JSON.stringify(myCsvArray)));
+						        function exportToJson() {
+						            console.log(placeArray);
+						            window.open('data:text/csv;charset=utf-8,' + escape(JSON.stringify(placeArray)));
 						        }
 
-						        var button = document.getElementById('b');
-						        button.addEventListener('click', exportToCsv);
+						        
+
+						        function containsCountry(obj, list) {
+								    var i;
+								    for (i = 0; i < list.length; i++) {
+								        if (list[i].placeName === obj) {
+								            return i;
+								        }
+								    }
+
+								    return -1;
+								}
+
+								function containsMaterial(obj, list) {
+								    var i;
+								    for (i = 0; i < list.length; i++) {
+								        if (list[i].material === obj) {
+								            return i;
+								        }
+								    }
+
+								    return -1;
+								}
+
+
 						    </script>
 						
 					</section>
 
 				<!-- Two -->
 					<section id="two">
-						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
+						<h2>Hur gör man?</h2>
+						<p>Ingen proxy-server är skapad så för att kunna göra GET-request måste man ladda ner ett plugin till chrome som heter <i>Allow-Control-Allow-Origin. </i>   Aktivera sedan det när du ska hämta din data.</p>
+						<p>Välj först vilket tidsintervall och vilken artefaktgrupp du vill ha din data ifrån. Klicka sedan <i>set specifics</i>. Därefter klickar du på <i>get data </i> och väntar. Datamängden är mycket stor så det kan ta VÄLDIGT lång tid, ta en kopp kaffe. När det är färdigt står det done. Klicka då på <i>export to json-5t1ng1f13d</i>. Tyvärr exporteras faktiskt inte en json array utan en .txt-fil, man får själv göra om den till json. <strong style="color: #B2163C;">Glöm inte att "refresha'a" sidan innna du ska hämta ny data om du inte vill att allt ska bli helt fel!</strong> </p>
+						<p>TIPS: Genom att kolla i consollen för webläsaren så kan man få sig en idé om hur långt det har laddat eller om det har blivit något error.</p>
 					</section>
 
-				<!-- Three -->
-					<section id="three">
-						<h2>Get In Touch</h2>
-					</section>
+				
 
 			</div>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-					<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</footer>
-
-		<!-- Scripts -->
 
 
 			<script src="assets/js/jquery.min.js"></script>
