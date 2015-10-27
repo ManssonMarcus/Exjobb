@@ -8,7 +8,7 @@
         <h2 id="slider-snap-value-upper"></h2>
         <p id ="textId"></p>
 
-        <div style="width: 100%; overflow: hidden; ">
+        <div style="width: 100%; overflow: hidden; margin-bottom:200px;">
             <div ng-init="value='all'" style="width: 300px; float:left;  border: 0px solid red;">
                 <p><input type="radio" ng-model="value" value="all" ng-change='newValue(value)'> Alla museum</p>
                 <p><input type="radio" ng-model="value" value="LSH" ng-change='newValue(value)'> Endast LSH</p>
@@ -29,7 +29,7 @@
                 <p><input type="radio" ng-model="value" value="armour" ng-change=''> Tyg </p>
             </div>
             <div>
-                 <select style="width:15%" ng-model='selectedNumber'  ng-options='number for number in numbers'></select>
+                 <select style="width:15%" ng-model='selectedMaterial' ng-change="showSelectValue(selectedMaterial)" ng-options='material for material in materials'></select>
                  <button ng-click="add()">add</button>
             </div>
             
