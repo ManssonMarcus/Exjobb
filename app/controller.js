@@ -168,8 +168,6 @@
 
     // eventlistener for the bubbles
     $(zoom.svg[0][0]).on('click', '.bubbles', function(geography) {
-      //handle click here as well
-     // alert(geography.toElement.__data__.name);
       var country = geography.toElement.__data__.name;
       var yearInterval = geography.toElement.__data__.yearInterval;
       getArtifacts(country, yearInterval);
@@ -179,28 +177,78 @@
       
       var startYear = yearInterval[0];
       var endYear = yearInterval[1];
+      var list = document.createElement('ul');
+      var headCountry = document.createElement('h1');
+      headCountry.appendChild(document.createTextNode(country));
+      list.appendChild(headCountry);
 
       $.ajax({
           //dataType: "json",
-          url: 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&x-api=test&method=search&hitsPerPage=50&query=place%3D%22'+country+'%22+and+create_toTime%3E%3D'+startYear+'+and+create_fromTime%3C%3D'+endYear,
+          url: 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&x-api=test&method=search&hitsPerPage=500&query=place%3D%22'+country+'%22+and+create_toTime%3E%3D'+startYear+'+and+create_fromTime%3C%3D'+endYear,
           type: 'GET',
           withCredentials: true,
       })
       .done(function(theData) {
-        console.log(theData);
-        for (var i = 0 ; i < 10 ; i++) {
-          myCountry = theData.getElementsByTagName("countryName")[i];
-          description = theData.getElementsByTagName("description")[i];
-          object = theData.getElementsByTagName("itemLabel")[i];
-          if (myCountry && description && object) {
-            if (myCountry.childNodes[0].nodeValue.toLowerCase() == country.toLowerCase()){
-              $.colorbox({html:"<h1>"+myCountry.childNodes[0].nodeValue+"</h1>"});
-              //console.log(myCountry.childNodes[0].nodeValue+" | "+ object.childNodes[0].nodeValue);
-              //console.log(description.childNodes[0].nodeValue);
+
+        hits = theData.getElementsByTagName("totalHits")[0].childNodes[0].nodeValue;
+       
+        for (var i = 0 ; i < hits ; i++) {
+          var test = theData.getElementsByTagName("record")[i];
+          //test = test.getElementsByTagName("RDF")[0];
+          
+          for (var j = 0 ; j<50 ; j++) {
+
+          
+            //var thisCountry = test.getElementsByTagName("countryName")[j];
+            var object = test.getElementsByTagName("itemLabel")[j];
+            var description = test.getElementsByTagName("description")[j];
+            var image = test.getElementsByTagName("thumbnail")[j];
+
+            if (description && object && image) {
+
+                var artefact = object.childNodes[0].nodeValue;
+                var info = description.childNodes[0].nodeValue;
+                var imgLink = image.childNodes[0].nodeValue;
+             
+                var divItem = document.createElement('div');
+                var headItem = document.createElement('h2');
+                var textItem = document.createElement('p');
+                var imgItem = document.createElement('img');
+
+                headItem.setAttribute('class', artefact);
+                headItem.appendChild(document.createTextNode(artefact));
+                textItem.appendChild(document.createTextNode(info));
+                imgItem.setAttribute('src', imgLink);
+                
+                divItem.appendChild(headItem);
+                divItem.appendChild(textItem);
+                divItem.appendChild(imgItem);
+                list.appendChild(divItem);
+            } 
+            else if (description && object && !image) {
+
+                var artefact = object.childNodes[0].nodeValue;
+                var info = description.childNodes[0].nodeValue;
+             
+                var divItem = document.createElement('div');
+                var headItem = document.createElement('h2');
+                var textItem = document.createElement('p');
+
+                headItem.setAttribute('class', artefact);
+                headItem.appendChild(document.createTextNode(artefact));
+                textItem.appendChild(document.createTextNode(info));
+                
+                divItem.appendChild(headItem);
+                divItem.appendChild(textItem);
+                list.appendChild(divItem);
+
             }
           }
         }
 
+        $.colorbox({html:list, width:'50%'});
+
+      
       }).fail(function(req) { 
         console.log("err");
       });
@@ -242,13 +290,13 @@
 
     function calcRadius(val){
       if (val == 0){return 0;}
-      else if (10 >= val > 0){return 5;}
-      else if (20 >= val > 10){return 10;}
-      else if (30 >= val > 20){return 15;}
-      else if (40 >= val > 30){return 20;}
-      else if (50 >= val > 40){return 25;}
-      else if (60 >= val > 50){return 30;}
-      else if ( val > 60){return 35;}
+      else if (10 >= val > 0){return 7;}
+      else if (20 >= val > 10){return 8;}
+      else if (30 >= val > 20){return 9;}
+      else if (40 >= val > 30){return 10;}
+      else if (50 >= val > 40){return 11;}
+      else if (60 >= val > 50){return 12;}
+      else if ( val > 60){return 13;}
     }
     function setFill(val) {
       

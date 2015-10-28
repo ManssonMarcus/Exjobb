@@ -10,15 +10,20 @@
 	function barController($scope, LocalStorage, QueryService, $timeout) {
 
 		$scope.countries = [];
+		$scope.listCountries = [];
 
+		$.getJSON("geoData/all.json", function(json) {
+			for (var i = 0 ;  i < json.length ; i++) {	
+				//if (containsCountry(json[i].placeName, $scope.listCountries) == -1) {	
+					$scope.listCountries.push(json[i]);
+				//}
+			}
+		});  
 
-	    $scope.doSomething = function () {
-		  	$.getJSON("geoData/all.json", function(json) {
-		    	getRightCountry(json, $scope.searchText);
-		    	$scope.newCountries = json;
-		    	console.log($scope.newCountries);
-		    });
-	  	}
+		$scope.provideCountry = function(val) {
+			console.log(val);
+			getRightCountry($scope.listCountries, val.placeName);
+		}
 
 	  	function getRightCountry(array, val) {
 		    for (var i = 0 ; i < array.length ; i++) {
@@ -30,7 +35,15 @@
 		    setTimeout(function(){ createBar($scope.countries); $scope.countries = [] }, 200);    
 		}
 
-
+		function containsCountry(obj, list) {
+			var i;
+			for (i = 0; i < list.length; i++) {
+				if (list[i].placeName === obj) {
+					return i;
+				}
+			}
+			return -1;
+		}
 		
 
 		function createBar(data){

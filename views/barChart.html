@@ -9,14 +9,7 @@
 
  		<div ng-init="newCountries"></div>
 
-		<label>Search: 
-			<input ng-model="searchText">
-			<input type="button" ng-click="doSomething()" value="Send" ng-disabled="searchText == null" />
-		</label>
-		<table id="searchTextResults">
-		  <tr ng-repeat="country in newCountries | filter:searchText">
-		    <td>{{country.placeName}}</td>
-		  </tr>
-		</table>
+		<select style="width:85%" ng-model='selectedCountry' ng-change="provideCountry(selectedCountry)" ng-options='country.placeName for country in listCountries | orderBy: country.placeName'></select>
+
     </div>
 </div>
