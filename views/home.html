@@ -29,7 +29,7 @@
                 <p><input type="radio" ng-model="value" value="armour" ng-change=''> Tyg </p>
             </div>
             <div>
-                 <select style="width:15%" ng-model='selectedMaterial' ng-change="showSelectValue(selectedMaterial)" ng-options='material for material in materials | orderBy: material'></select>
+                 <select style="width:15%" ng-model='selectedMaterial' ng-change="showSelectMaterial(selectedMaterial)" ng-options='material for material in materials | orderBy: material'></select>
                  <button ng-click="add()">add</button>
             </div>
             

@@ -23,6 +23,7 @@
     var LSHjson = [];
     var weaponjson = [];
     var thejson = [];
+    var materialRefineArray = [];
     var materialArray = [];
     var startYear;
     var snapSlider = document.getElementById('slider-snap');
@@ -56,8 +57,8 @@
     $.getJSON("geoData/all.json", function(json) {
       alljson = json;
       thejson = json;
-
-      
+      materialRefineArray = json;
+      getMaterials(thejson);
     });
     
     
@@ -68,6 +69,7 @@
         var theMaterialArray = array[i].materialArray  
         for (var j = 0 ; j < array[i].materialArray.length ; j++) {
           var theMaterial = theMaterialArray[j].material;
+          var year = array[i].yearInterval[0];
           if (materialArray.indexOf(theMaterial) == -1){
             materialArray.push(theMaterial);
           }
@@ -79,19 +81,21 @@
 
     
     //function to use the selected value from the dropdown
-    $scope.showSelectValue = function(materialValue) {     
-      for (var i = 0 ; i < thejson.length ; i++){
-        for (var j = 0 ; j < thejson[i].materialArray.length ; j++){
-          
-          if (thejson[i].materialArray[j].material == materialValue) {
-            console.log(thejson[i].materialArray[j].material + "  "+materialValue);
-            thejson[i].amount = thejson[i].materialArray[j].materialAmount;
-          }
-          else {
-            thejson[i].amount = 0;
+    $scope.showSelectMaterial = function(materialValue) {     
+      var tempArray = [];
+      console.log("---------------------------------------");
+      for (var i = 0 ; i < materialRefineArray.length ; i++){
+        for (var j = 0 ; j < materialRefineArray[i].materialArray.length ; j++){
+          if (materialRefineArray[i].materialArray[j].material == materialValue) {
+            var tempObject = materialRefineArray[i];
+            tempObject.amount = tempObject.materialArray[j].materialAmount; 
+            tempArray.push(tempObject);
+            console.log(tempObject);
           }
         }
       }
+      thejson = tempArray;
+      setPlotYear(startYear, thejson);
     }
 
 
@@ -184,64 +188,77 @@
 
       $.ajax({
           //dataType: "json",
-          url: 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&x-api=test&method=search&hitsPerPage=500&query=place%3D%22'+country+'%22+and+create_toTime%3E%3D'+startYear+'+and+create_fromTime%3C%3D'+endYear,
+          url: 'http://kulturarvsdata.se/ksamsok/api?stylesheet=&x-api=test&method=search&hitsPerPage=200&query=place%3D%22'+country+'%22+and+create_toTime%3E%3D'+startYear+'+and+create_fromTime%3C%3D'+endYear,
           type: 'GET',
           withCredentials: true,
       })
       .done(function(theData) {
 
         hits = theData.getElementsByTagName("totalHits")[0].childNodes[0].nodeValue;
-       
-        for (var i = 0 ; i < hits ; i++) {
+
+        var limit;
+
+        if (hits > 50){
+          limit = 50;
+        }
+        else {
+          limit = hits;
+        }
+        for (var i = 0 ; i < limit ; i++) {
           var test = theData.getElementsByTagName("record")[i];
           //test = test.getElementsByTagName("RDF")[0];
-          
-          for (var j = 0 ; j<50 ; j++) {
+          if(test){
+            for (var j = 0 ; j<50 ; j++) {
 
-          
-            //var thisCountry = test.getElementsByTagName("countryName")[j];
-            var object = test.getElementsByTagName("itemLabel")[j];
-            var description = test.getElementsByTagName("description")[j];
-            var image = test.getElementsByTagName("thumbnail")[j];
+              
+            
+              //var thisCountry = test.getElementsByTagName("countryName")[j];
+              var object = test.getElementsByTagName("itemLabel")[j];
+              var description = test.getElementsByTagName("description")[j];
+              var image = test.getElementsByTagName("thumbnail")[j];
 
-            if (description && object && image) {
+              if (description && object && image) {
 
-                var artefact = object.childNodes[0].nodeValue;
-                var info = description.childNodes[0].nodeValue;
-                var imgLink = image.childNodes[0].nodeValue;
-             
-                var divItem = document.createElement('div');
-                var headItem = document.createElement('h2');
-                var textItem = document.createElement('p');
-                var imgItem = document.createElement('img');
 
-                headItem.setAttribute('class', artefact);
-                headItem.appendChild(document.createTextNode(artefact));
-                textItem.appendChild(document.createTextNode(info));
-                imgItem.setAttribute('src', imgLink);
-                
-                divItem.appendChild(headItem);
-                divItem.appendChild(textItem);
-                divItem.appendChild(imgItem);
-                list.appendChild(divItem);
-            } 
-            else if (description && object && !image) {
+                  var artefact = object.childNodes[0].nodeValue;
+                  var info = description.childNodes[0].nodeValue;
+                  var imgLink = image.childNodes[0].nodeValue;
+               
+                  var divItem = document.createElement('div');
+                  var headItem = document.createElement('h2');
+                  var textItem = document.createElement('p');
+                  var imgItem = document.createElement('img');
 
-                var artefact = object.childNodes[0].nodeValue;
-                var info = description.childNodes[0].nodeValue;
-             
-                var divItem = document.createElement('div');
-                var headItem = document.createElement('h2');
-                var textItem = document.createElement('p');
+                  headItem.setAttribute('class', artefact);
+                  headItem.appendChild(document.createTextNode(artefact));
+                  textItem.appendChild(document.createTextNode(info));
+                  imgItem.setAttribute('src', imgLink);
+                  
+                  divItem.appendChild(headItem);
+                  divItem.appendChild(textItem);
+                  divItem.appendChild(imgItem);
+                  list.appendChild(divItem);
+              } 
+              else if (description && object && !image) {
 
-                headItem.setAttribute('class', artefact);
-                headItem.appendChild(document.createTextNode(artefact));
-                textItem.appendChild(document.createTextNode(info));
-                
-                divItem.appendChild(headItem);
-                divItem.appendChild(textItem);
-                list.appendChild(divItem);
 
+                  var artefact = object.childNodes[0].nodeValue;
+                  var info = description.childNodes[0].nodeValue;
+               
+                  var divItem = document.createElement('div');
+                  var headItem = document.createElement('h2');
+                  var textItem = document.createElement('p');
+
+                  headItem.setAttribute('class', artefact);
+                  headItem.appendChild(document.createTextNode(artefact));
+                  textItem.appendChild(document.createTextNode(info));
+                  
+                  divItem.appendChild(headItem);
+                  divItem.appendChild(textItem);
+                  list.appendChild(divItem);
+
+              }
+              
             }
           }
         }
@@ -255,37 +272,26 @@
     }
 
     //stupid way of initializing dots on the map, needs to change
-    setTimeout(function(){ setPlotYear(startYear)}, 600);
+    setTimeout(function(){ setPlotYear(startYear, thejson)}, 600);
 
     //Listen to radiobutton to assign right dataset to thejson
     $scope.newValue = function(value) {
       if (value == "LSH") {
         thejson = LSHjson;
-        setPlotYear(startYear);
+        setPlotYear(startYear, LSHjson);
       }
       else if (value == "all"){
         thejson = alljson;
-        setPlotYear(startYear);
+        materialRefineArray = alljson;
+        setPlotYear(startYear, alljson);
         getMaterials(thejson);
       }
       else if (value == "weapon"){
         thejson = weaponjson;
-        setPlotYear(startYear);
+        materialRefineArray = weaponjson;
+        setPlotYear(startYear, weaponjson);
         getMaterials(thejson);
       }
-    }
-
-    //set right yearSpan for plot
-    function setPlotYear(startYear) {
-      tempArray = [];
-        for (var i = 0 ; i < thejson.length ; i++){
-          if(startYear == thejson[i].yearInterval[0]) {
-              tempArray.push(thejson[i]);
-          }
-          if (i+1 == thejson.length) {
-            plot(tempArray);
-          }
-        }
     }
 
     function calcRadius(val){
@@ -319,6 +325,19 @@
       else {return 'f00'}
     }
 
+
+    //set right yearSpan for plot
+    function setPlotYear(startYear, theArray) {
+      var tempArray = [];
+        for (var i = 0 ; i < theArray.length ; i++){
+          if(startYear == theArray[i].yearInterval[0]) {
+              tempArray.push(theArray[i]);
+          }
+          if (i+1 == theArray.length) {
+            plot(tempArray);
+          }
+        }
+    }
     //simple plot-function
     function plot(occ){
       $.getJSON("data.json", function(json) {
@@ -394,7 +413,7 @@
     snapSlider.noUiSlider.on('update', function( values, handle ) {
       startYear = parseInt(values[0]);
       changeText(parseInt(values[0]));
-      setPlotYear(startYear);
+      setPlotYear(startYear, thejson);
       snapValues[handle].innerHTML = startYear+"-"+ (startYear+50);
     });
 
