@@ -1,4 +1,4 @@
-<h2>Karta mother fucker</h2>
+<h2>Karta</h2>
 
 <div class="container cf">
     <div>
@@ -10,23 +10,20 @@
 
         <div style="width: 100%; overflow: hidden; margin-bottom:200px;">
             <div ng-init="value='all'" style="width: 300px; float:left;  border: 0px solid red;">
-                <p><input type="radio" ng-model="value" value="all" ng-change='newValue(value)'> Alla museum</p>
+                <p><input type="radio" ng-model="value" value="all" ng-change='newValue(value)'> Alla antikviteter från alla museum</p>
                 <p><input type="radio" ng-model="value" value="LSH" ng-change='newValue(value)'> Endast LSH</p>
             </div>
-            <div ng-init="" style="border: 0px solid blue; float: left; margin-right: 20px;">
-                <p><input type="radio" ng-model="value" value="allArtefacts" ng-change=''> Alla artefakter </p>
-            </div>
             <div ng-init="" style="border: 0px solid green; float: left; margin-right: 20px;">
-                <p><input type="radio" ng-model="value" value="weapon" ng-change='newValue(value)'> Vapen </p>
-                <p><input type="radio" ng-model="value" value="clothes" ng-change=''>Kläder </p>
+                <p id="weaponID"><input id="radioWeapon" type="radio" ng-model="value" value="weapon" ng-change='newValue(value)'> Vapen </p>
+                <p id="clothesID"><input id="radioClothes" type="radio" ng-model="value" value="clothes" ng-change='newValue(value)'>Kläder </p>
             </div>
             <div ng-init="" style="border: 0px solid blue; float: left; margin-right: 20px;">
-                <p><input type="radio" ng-model="value" value="art" ng-change=''> Konst & hantverk </p>
-                <p><input type="radio" ng-model="value" value="armour" ng-change=''> Rustningar </p>
+                <p id="artID"><input id="radioArt" type="radio" ng-model="value" value="art" ng-change='newValue(value)'> Konst & hantverk </p>
+                <p id="armourID"><input id="radioArmour" type="radio" ng-model="value" value="armour" ng-change='newValue(value)'> Rustningar </p>
             </div>
             <div ng-init="" style="border: 0px solid blue; float: left; margin-right:50px;">
-                <p><input type="radio" ng-model="value" value="art" ng-change=''> Möbler </p>
-                <p><input type="radio" ng-model="value" value="armour" ng-change=''> Tyg </p>
+                <p id="furnitureID"><input id="radioFurniture" type="radio" ng-model="value" value="furniture" ng-change='newValue(value)'> Möbler </p>
+                <p id="garnitureID"><input id="radioGarniture" type="radio" ng-model="value" value="garniture" ng-change='newValue(value)'> Tyg </input></p>
             </div>
             <div>
                  <select style="width:15%" ng-model='selectedMaterial' ng-change="showSelectMaterial(selectedMaterial)" ng-options='material for material in materials | orderBy: material'></select>

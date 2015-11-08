@@ -23,7 +23,7 @@
 		});  
 
 		var meanValues;
-		setTimeout(function(){ meanValues = calcMean($scope.listCountries); }, 400); 
+		setTimeout(function(){ meanValues = calcMean($scope.listCountries); }, 700); 
 
 		function calcMean(array){
 			var counter = 0;
@@ -58,7 +58,7 @@
 		    		$scope.countries.push(array[i]);
 		    	}
 		    }
-		    setTimeout(function(){ createBar($scope.countries, meanValues); $scope.countries = [] }, 200);    
+		    setTimeout(function(){ createBar($scope.countries, meanValues); $scope.countries = [] }, 800);    
 		}
 
 		function containsCountry(obj, list) {
@@ -81,6 +81,11 @@
 			return -1;
 		}
 		
+		var barNum = 0;
+		function setBarClass(){
+			barNum++;
+			return "bar"+barNum;
+		}
 
 		function createBar(data, means){
 
@@ -145,7 +150,15 @@
 		var svgText = svg.selectAll("text")
 		                  .data(dataset)
 		                  .enter()
-		
+		var tooltip = d3.select("body")
+		    .append("div")
+		    .style("position", "absolute")
+		    .style("z-index", "10")
+		    .style("visibility", "hidden")
+		    .style("background", "#FFF")
+		    .style("padding", "5px")
+		    .style("border-radius", "2px")
+		    .text("a simple tooltip");
 
 		svgRect.append("rect")
 		   .attr("x", function(d, i){ return i * 120; }) 
@@ -158,7 +171,8 @@
 		      return d*barSize;
 		   })
 		   .attr("width", 80)
-		   .attr("fill", function(d, i) { return colors[i]; });
+		   .attr("fill", function(d, i) { return colors[i]; })
+
 
 		// De övra stolparna
 		svgRect.append("rect")  
@@ -167,7 +181,12 @@
 		   .attr("width", 80)
 		   .attr("opacity", 0.3)
 		   .attr("fill", function(d, i) { return colors[i]; })
-		   .on("mouseover", function(d, i){console.log("HEJ")});
+		   .attr("id", function(d, j){ return "bar"+(j+1);})
+		   .text(function(d) { return "hej"})
+		   .on("mouseover", function(d,i){return [tooltip.style("visibility", "visible"), tooltip.text("snittimport: "+datasetMean[i])];})
+		   .on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px").text();
+	})
+		   .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
 
 
 		 //Dataset value

@@ -22,6 +22,11 @@
     var alljson = [];
     var LSHjson = [];
     var weaponjson = [];
+    var armourjson = [];
+    var artjson = [];
+    var clothesjson = [];
+    var furniturejson = [];
+    var garniturejson = [];
     var thejson = [];
     var materialRefineArray = [];
     var materialArray = [];
@@ -47,12 +52,26 @@
    
 
     //get datasets for all museums & LSH
-    $.getJSON("geoYearData/LSH/allLSHUtanSvea.json", function(json) {
+    $.getJSON("geoData/LSH.json", function(json) {
       LSHjson = json;
     });
     $.getJSON("geoData/weapon.json", function(json) {
       weaponjson = json;
-      
+    });
+    $.getJSON("geoData/armour.json", function(json) {
+      armourjson = json;
+    });
+    $.getJSON("geoData/art.json", function(json) {
+      artjson = json;
+    });
+    $.getJSON("geoData/clothes.json", function(json) {
+      clothesjson = json;
+    });
+    $.getJSON("geoData/furniture.json", function(json) {
+      furniturejson = json;
+    });
+    $.getJSON("geoData/garniture.json", function(json) {
+      garniturejson = json;
     });
     $.getJSON("geoData/all.json", function(json) {
       alljson = json;
@@ -277,10 +296,36 @@
     //Listen to radiobutton to assign right dataset to thejson
     $scope.newValue = function(value) {
       if (value == "LSH") {
+        document.getElementById("radioWeapon").disabled = true;
+        document.getElementById("weaponID").style.opacity=0.5;  
+        document.getElementById("radioClothes").disabled = true;
+        document.getElementById("clothesID").style.opacity=0.5; 
+        document.getElementById("radioFurniture").disabled = true;
+        document.getElementById("furnitureID").style.opacity=0.5; 
+        document.getElementById("radioArt").disabled = true;
+        document.getElementById("artID").style.opacity=0.5; 
+        document.getElementById("radioGarniture").disabled = true;
+        document.getElementById("garnitureID").style.opacity=0.5; 
+        document.getElementById("radioArmour").disabled = true;
+        document.getElementById("armourID").style.opacity=0.5; 
         thejson = LSHjson;
+        materialRefineArray = LSHjson;
         setPlotYear(startYear, LSHjson);
+        getMaterials(thejson);
       }
       else if (value == "all"){
+        document.getElementById("radioWeapon").disabled = false;
+        document.getElementById("weaponID").style.opacity=1.0; 
+        document.getElementById("radioClothes").disabled = false;
+        document.getElementById("clothesID").style.opacity=1.0; 
+        document.getElementById("radioFurniture").disabled = false;
+        document.getElementById("furnitureID").style.opacity=1.0; 
+        document.getElementById("radioArt").disabled = false;
+        document.getElementById("artID").style.opacity=1.0; 
+        document.getElementById("radioGarniture").disabled = false;
+        document.getElementById("garnitureID").style.opacity=1.0; 
+        document.getElementById("radioArmour").disabled = false;
+        document.getElementById("armourID").style.opacity=1.0; 
         thejson = alljson;
         materialRefineArray = alljson;
         setPlotYear(startYear, alljson);
@@ -290,6 +335,37 @@
         thejson = weaponjson;
         materialRefineArray = weaponjson;
         setPlotYear(startYear, weaponjson);
+        getMaterials(thejson);
+      }
+      else if(value == "armour") {
+        thejson = armourjson;
+        materialRefineArray = armourjson;
+        setPlotYear(startYear, armourjson);
+        getMaterials(thejson);
+      }
+      else if(value == "art") {
+        thejson = artjson;
+        materialRefineArray = artjson;
+        setPlotYear(startYear, artjson);
+        getMaterials(thejson);
+      }
+      else if(value == "clothes") {
+        thejson = clothesjson;
+        materialRefineArray = clothesjson;
+        setPlotYear(startYear, clothesjson);
+        getMaterials(thejson);
+      }
+      else if(value == "furniture") {
+        thejson = furniturejson;
+        materialRefineArray = furniturejson;
+        setPlotYear(startYear, furniturejson);
+        getMaterials(thejson);
+      }
+      else if(value == "garniture") {
+        console.log("yaya!");
+        thejson = garniturejson;
+        materialRefineArray = garniturejson;
+        setPlotYear(startYear, garniturejson);
         getMaterials(thejson);
       }
     }

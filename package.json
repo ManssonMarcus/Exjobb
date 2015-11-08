@@ -57,5 +57,11 @@
   "bugs": {
     "url": "https://github.com/jbutko/AngularJS-Boilerplate/issues"
   },
-  "homepage": "https://github.com/jbutko/AngularJS-Boilerplate"
+  "homepage": "https://github.com/jbutko/AngularJS-Boilerplate",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "fs": "0.0.2",
+    "http-proxy": "^1.12.0"
+  }
 }

@@ -1,0 +1,3776 @@
+[
+   {
+      "placeName":"sverige (se)",
+      "yearInterval":[
+         1500,
+         1550
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"ek",
+            "materialAmount":1
+         },
+         {
+            "material":"näver",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"nederländerna",
+      "yearInterval":[
+         1500,
+         1550
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"trä",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige",
+      "yearInterval":[
+         1500,
+         1550
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"skinn",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige (se)",
+      "yearInterval":[
+         1550,
+         1600
+      ],
+      "amount":3,
+      "materialArray":[
+         {
+            "material":"trä",
+            "materialAmount":1
+         },
+         {
+            "material":"skinn",
+            "materialAmount":1
+         },
+         {
+            "material":"näver",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige (se)",
+      "yearInterval":[
+         1600,
+         1650
+      ],
+      "amount":4,
+      "materialArray":[
+         {
+            "material":"textil, linne",
+            "materialAmount":1
+         },
+         {
+            "material":"silke",
+            "materialAmount":1
+         },
+         {
+            "material":"siden",
+            "materialAmount":1
+         },
+         {
+            "material":"spets",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige (se)",
+      "yearInterval":[
+         1650,
+         1700
+      ],
+      "amount":22,
+      "materialArray":[
+         {
+            "material":"siden",
+            "materialAmount":8
+         },
+         {
+            "material":"linnelärft",
+            "materialAmount":2
+         },
+         {
+            "material":"kläde",
+            "materialAmount":1
+         },
+         {
+            "material":"guld",
+            "materialAmount":1
+         },
+         {
+            "material":"silver",
+            "materialAmount":1
+         },
+         {
+            "material":"guldbrokad",
+            "materialAmount":1
+         },
+         {
+            "material":"sammet",
+            "materialAmount":2
+         },
+         {
+            "material":"silvertråd",
+            "materialAmount":1
+         },
+         {
+            "material":"mässing",
+            "materialAmount":1
+         },
+         {
+            "material":"guldtråd",
+            "materialAmount":1
+         },
+         {
+            "material":"trä",
+            "materialAmount":1
+         },
+         {
+            "material":"duk",
+            "materialAmount":1
+         },
+         {
+            "material":"linne",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige",
+      "yearInterval":[
+         1650,
+         1700
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"silketråd",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"italien",
+      "yearInterval":[
+         1650,
+         1700
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"läder",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige (se)",
+      "yearInterval":[
+         1700,
+         1750
+      ],
+      "amount":57,
+      "materialArray":[
+         {
+            "material":"linne",
+            "materialAmount":2
+         },
+         {
+            "material":"silketråd",
+            "materialAmount":1
+         },
+         {
+            "material":"läder",
+            "materialAmount":2
+         },
+         {
+            "material":"ylle, halm,",
+            "materialAmount":1
+         },
+         {
+            "material":"trä",
+            "materialAmount":6
+         },
+         {
+            "material":"siden",
+            "materialAmount":2
+         },
+         {
+            "material":"textil",
+            "materialAmount":3
+         },
+         {
+            "material":"metalltråd",
+            "materialAmount":1
+         },
+         {
+            "material":"silke",
+            "materialAmount":1
+         },
+         {
+            "material":"silver",
+            "materialAmount":2
+         },
+         {
+            "material":"al",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, linne",
+            "materialAmount":3
+         },
+         {
+            "material":"olja",
+            "materialAmount":1
+         },
+         {
+            "material":"stål",
+            "materialAmount":1
+         },
+         {
+            "material":"valnöt",
+            "materialAmount":1
+         },
+         {
+            "material":"mässing",
+            "materialAmount":1
+         },
+         {
+            "material":"horn",
+            "materialAmount":1
+         },
+         {
+            "material":"pärlemor",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, vadmal",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, siden",
+            "materialAmount":1
+         },
+         {
+            "material":"hår",
+            "materialAmount":1
+         },
+         {
+            "material":"lin?",
+            "materialAmount":1
+         },
+         {
+            "material":"ylle, stoppning, halm*",
+            "materialAmount":1
+         },
+         {
+            "material":"linnetyg",
+            "materialAmount":1
+         },
+         {
+            "material":"färg",
+            "materialAmount":1
+         },
+         {
+            "material":"björk",
+            "materialAmount":5
+         },
+         {
+            "material":"tyg",
+            "materialAmount":5
+         },
+         {
+            "material":"mullbärssilke",
+            "materialAmount":1
+         },
+         {
+            "material":"textilfiber",
+            "materialAmount":1
+         },
+         {
+            "material":"linnne",
+            "materialAmount":1
+         },
+         {
+            "material":"papper",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle",
+            "materialAmount":2
+         },
+         {
+            "material":"päls",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, kamlott",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"tyskland (de)",
+      "yearInterval":[
+         1700,
+         1750
+      ],
+      "amount":7,
+      "materialArray":[
+         {
+            "material":"siden",
+            "materialAmount":2
+         },
+         {
+            "material":"tyg",
+            "materialAmount":2
+         },
+         {
+            "material":"björk",
+            "materialAmount":1
+         },
+         {
+            "material":"trä",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, linne",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige",
+      "yearInterval":[
+         1700,
+         1750
+      ],
+      "amount":5,
+      "materialArray":[
+         {
+            "material":"silketråd",
+            "materialAmount":1
+         },
+         {
+            "material":"linne",
+            "materialAmount":2
+         },
+         {
+            "material":"lintråd",
+            "materialAmount":1
+         },
+         {
+            "material":"lin",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"storbritannien (gb)",
+      "yearInterval":[
+         1700,
+         1750
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"oljefärg",
+            "materialAmount":1
+         },
+         {
+            "material":"björk",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"tyskland",
+      "yearInterval":[
+         1700,
+         1750
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"textil",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"indien (in)",
+      "yearInterval":[
+         1700,
+         1750
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"textil, ylle",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"frankrike, tyskland",
+      "yearInterval":[
+         1700,
+         1750
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"textil, bomull",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"tyskland (de)",
+      "yearInterval":[
+         1750,
+         1800
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"silvertyg",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige (se)",
+      "yearInterval":[
+         1750,
+         1800
+      ],
+      "amount":299,
+      "materialArray":[
+         {
+            "material":"silverlan",
+            "materialAmount":1
+         },
+         {
+            "material":"boj",
+            "materialAmount":1
+         },
+         {
+            "material":"siden",
+            "materialAmount":6
+         },
+         {
+            "material":"trä",
+            "materialAmount":13
+         },
+         {
+            "material":"silver",
+            "materialAmount":1
+         },
+         {
+            "material":"mässing",
+            "materialAmount":1
+         },
+         {
+            "material":"horn",
+            "materialAmount":1
+         },
+         {
+            "material":"spån",
+            "materialAmount":1
+         },
+         {
+            "material":"silverbrokad",
+            "materialAmount":2
+         },
+         {
+            "material":"tyll",
+            "materialAmount":1
+         },
+         {
+            "material":"sidenrips",
+            "materialAmount":1
+         },
+         {
+            "material":"papper",
+            "materialAmount":10
+         },
+         {
+            "material":"textil, ylle, vadmal",
+            "materialAmount":8
+         },
+         {
+            "material":"textil, ylle",
+            "materialAmount":31
+         },
+         {
+            "material":"textil, linne, kypert",
+            "materialAmount":4
+         },
+         {
+            "material":"textil",
+            "materialAmount":9
+         },
+         {
+            "material":"bomull",
+            "materialAmount":5
+         },
+         {
+            "material":"skinn",
+            "materialAmount":1
+         },
+         {
+            "material":"animaliskt material",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, linne",
+            "materialAmount":40
+         },
+         {
+            "material":"textil, siden",
+            "materialAmount":12
+         },
+         {
+            "material":"textil, ylle, kalmink",
+            "materialAmount":8
+         },
+         {
+            "material":"tenn",
+            "materialAmount":2
+         },
+         {
+            "material":"läder",
+            "materialAmount":3
+         },
+         {
+            "material":"sammet",
+            "materialAmount":1
+         },
+         {
+            "material":"bomull, skinn",
+            "materialAmount":1
+         },
+         {
+            "material":"lin",
+            "materialAmount":15
+         },
+         {
+            "material":"lin?",
+            "materialAmount":1
+         },
+         {
+            "material":"keramik",
+            "materialAmount":1
+         },
+         {
+            "material":"ylle, stoppning, halm*",
+            "materialAmount":1
+         },
+         {
+            "material":"linnetyg",
+            "materialAmount":1
+         },
+         {
+            "material":"färg",
+            "materialAmount":1
+         },
+         {
+            "material":"björk",
+            "materialAmount":8
+         },
+         {
+            "material":"tyg",
+            "materialAmount":8
+         },
+         {
+            "material":"mullbärssilke",
+            "materialAmount":1
+         },
+         {
+            "material":"ylle",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, kypert",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, schagg",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull",
+            "materialAmount":7
+         },
+         {
+            "material":"järn",
+            "materialAmount":2
+         },
+         {
+            "material":"skinn/läder/pergament",
+            "materialAmount":2
+         },
+         {
+            "material":"får",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, sammet",
+            "materialAmount":1
+         },
+         {
+            "material":"fårull",
+            "materialAmount":6
+         },
+         {
+            "material":"textil, bomull, kambrik",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, halvylle",
+            "materialAmount":1
+         },
+         {
+            "material":"papier-maché",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, kläde",
+            "materialAmount":1
+         },
+         {
+            "material":"porslin",
+            "materialAmount":1
+         },
+         {
+            "material":"halm",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, ylle, kamlott",
+            "materialAmount":3
+         },
+         {
+            "material":"fernissa",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull, kattun",
+            "materialAmount":5
+         },
+         {
+            "material":"bomull, papper",
+            "materialAmount":1
+         },
+         {
+            "material":"oljefärg",
+            "materialAmount":1
+         },
+         {
+            "material":"ull",
+            "materialAmount":3
+         },
+         {
+            "material":"textil, ylle, rask",
+            "materialAmount":1
+         },
+         {
+            "material":"spets",
+            "materialAmount":1
+         },
+         {
+            "material":"guldtråd",
+            "materialAmount":1
+         },
+         {
+            "material":"näver, flaknäver",
+            "materialAmount":1
+         },
+         {
+            "material":"trä, björkrot",
+            "materialAmount":1
+         },
+         {
+            "material":"silke",
+            "materialAmount":3
+         },
+         {
+            "material":"silverband",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, tyll",
+            "materialAmount":1
+         },
+         {
+            "material":"silverspets",
+            "materialAmount":1
+         },
+         {
+            "material":"pärlor",
+            "materialAmount":2
+         },
+         {
+            "material":"metall",
+            "materialAmount":2
+         },
+         {
+            "material":"stavpärlor",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, siden, brokad",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, halvsilke",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, ylle, satin",
+            "materialAmount":1
+         },
+         {
+            "material":"stål",
+            "materialAmount":1
+         },
+         {
+            "material":"valbard",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, linne, tuskaft",
+            "materialAmount":1
+         },
+         {
+            "material":"vegetabiliska fibrer",
+            "materialAmount":1
+         },
+         {
+            "material":"kattun",
+            "materialAmount":1
+         },
+         {
+            "material":"trä, trä - liggtimmer",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - falsad, storplåtsformat, trä - spån",
+            "materialAmount":1
+         },
+         {
+            "material":"yllekanvas",
+            "materialAmount":1
+         },
+         {
+            "material":"trä - träpanel, trä - träpanel, locklistpanel",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar",
+            "materialAmount":1
+         },
+         {
+            "material":"trä - spån, trä - träpanel, trä - spån, trä - träpanel",
+            "materialAmount":1
+         },
+         {
+            "material":"trä, trä - liggtimmer, trä - liggtimmer, fyrkantsvirke med utknut",
+            "materialAmount":1
+         },
+         {
+            "material":"trä - spån",
+            "materialAmount":1
+         },
+         {
+            "material":"puts - sprit",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - natursten",
+            "materialAmount":2
+         },
+         {
+            "material":"sten - skiffersten",
+            "materialAmount":1
+         },
+         {
+            "material":"hår",
+            "materialAmount":1
+         },
+         {
+            "material":"trä, lövträ",
+            "materialAmount":1
+         },
+         {
+            "material":"nöthår",
+            "materialAmount":1
+         },
+         {
+            "material":"puts - sprit, puts - stänk- och sprutputs",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - natursten, murverk",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt, takpannor - lertegel, enkupiga",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - kvastad",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - natursten, murverk - natursten, granit",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, takpannor - lertegel, enkupiga",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - slät",
+            "materialAmount":2
+         },
+         {
+            "material":"murverk, murverk - natursten, sandsten, murverk - natursten, kalksten, murverk - natursten, sandsten",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, sten - skiffersten",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - natursten, murverk - natursten",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - förzinkad, takpannor - lertegel",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - sprit",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige",
+      "yearInterval":[
+         1750,
+         1800
+      ],
+      "amount":26,
+      "materialArray":[
+         {
+            "material":"twills",
+            "materialAmount":1
+         },
+         {
+            "material":"silverlamé",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, linne",
+            "materialAmount":2
+         },
+         {
+            "material":"oljefärg",
+            "materialAmount":1
+         },
+         {
+            "material":"bomull (sammet)",
+            "materialAmount":1
+         },
+         {
+            "material":"metalltråd",
+            "materialAmount":1
+         },
+         {
+            "material":"stål",
+            "materialAmount":1
+         },
+         {
+            "material":"silevrtråd",
+            "materialAmount":1
+         },
+         {
+            "material":"mässing",
+            "materialAmount":1
+         },
+         {
+            "material":"ull",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, kalmink",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle",
+            "materialAmount":1
+         },
+         {
+            "material":"textil: ylle, kamgarn, barkan",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, siden",
+            "materialAmount":2
+         },
+         {
+            "material":"textil",
+            "materialAmount":1
+         },
+         {
+            "material":"lin",
+            "materialAmount":1
+         },
+         {
+            "material":"papper",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, linne, kypert",
+            "materialAmount":1
+         },
+         {
+            "material":"hår",
+            "materialAmount":1
+         },
+         {
+            "material":"bomull",
+            "materialAmount":1
+         },
+         {
+            "material":"silke",
+            "materialAmount":1
+         },
+         {
+            "material":"sten - skiffersten, plåt - koppar, plåt - falsad, förskjutna hakfals",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - sprit",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"frankrike",
+      "yearInterval":[
+         1750,
+         1800
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"valnöt",
+            "materialAmount":1
+         },
+         {
+            "material":"tagel",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"storbritannien (gb)",
+      "yearInterval":[
+         1750,
+         1800
+      ],
+      "amount":32,
+      "materialArray":[
+         {
+            "material":"pärlemor",
+            "materialAmount":1
+         },
+         {
+            "material":"silkestråd",
+            "materialAmount":1
+         },
+         {
+            "material":"siden",
+            "materialAmount":1
+         },
+         {
+            "material":"papper",
+            "materialAmount":1
+         },
+         {
+            "material":"hår",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, linne",
+            "materialAmount":6
+         },
+         {
+            "material":"textilfiber",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, kamlott",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, halvylle",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, ylle, vadmal",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull",
+            "materialAmount":2
+         },
+         {
+            "material":"textil",
+            "materialAmount":2
+         },
+         {
+            "material":"gips",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, moaré",
+            "materialAmount":1
+         },
+         {
+            "material":"fårull",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, sidenbrokad",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, siden, brokad",
+            "materialAmount":1
+         },
+         {
+            "material":"silke",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, ylle",
+            "materialAmount":1
+         },
+         {
+            "material":"guldtråd",
+            "materialAmount":1
+         },
+         {
+            "material":"trä, trä",
+            "materialAmount":1
+         },
+         {
+            "material":"ull",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"kina (cn)",
+      "yearInterval":[
+         1750,
+         1800
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"silverlan",
+            "materialAmount":1
+         },
+         {
+            "material":"animaliskt material",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"finland (fi)",
+      "yearInterval":[
+         1750,
+         1800
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"silvertråd",
+            "materialAmount":1
+         },
+         {
+            "material":"silverlan",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"tyskland",
+      "yearInterval":[
+         1750,
+         1800
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"trä",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"frankrike (fr)",
+      "yearInterval":[
+         1750,
+         1800
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"papper",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"estland (ee)",
+      "yearInterval":[
+         1750,
+         1800
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"trä",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"norge (no)",
+      "yearInterval":[
+         1750,
+         1800
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"textil, linne",
+            "materialAmount":1
+         },
+         {
+            "material":"mässing",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"indien (in)",
+      "yearInterval":[
+         1750,
+         1800
+      ],
+      "amount":3,
+      "materialArray":[
+         {
+            "material":"silke",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull, kattun",
+            "materialAmount":1
+         },
+         {
+            "material":"papper",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"norge",
+      "yearInterval":[
+         1750,
+         1800
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"trä - träpanel, trä - spån",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":78,
+      "materialArray":[
+         {
+            "material":"bomull, skinn",
+            "materialAmount":1
+         },
+         {
+            "material":"linnetyg",
+            "materialAmount":1
+         },
+         {
+            "material":"tyg",
+            "materialAmount":2
+         },
+         {
+            "material":"silke",
+            "materialAmount":1
+         },
+         {
+            "material":"puts - sprit",
+            "materialAmount":2
+         },
+         {
+            "material":"murverk - natursten",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, ylle",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, linne",
+            "materialAmount":4
+         },
+         {
+            "material":"ull",
+            "materialAmount":2
+         },
+         {
+            "material":"textil",
+            "materialAmount":6
+         },
+         {
+            "material":"bomull",
+            "materialAmount":6
+         },
+         {
+            "material":"papper",
+            "materialAmount":9
+         },
+         {
+            "material":"järn",
+            "materialAmount":1
+         },
+         {
+            "material":"lunppapper",
+            "materialAmount":1
+         },
+         {
+            "material":"mässing",
+            "materialAmount":1
+         },
+         {
+            "material":"papier-maché",
+            "materialAmount":1
+         },
+         {
+            "material":"limfärg",
+            "materialAmount":3
+         },
+         {
+            "material":"textil, siden",
+            "materialAmount":4
+         },
+         {
+            "material":"textil, ylle, kypert",
+            "materialAmount":1
+         },
+         {
+            "material":"trä",
+            "materialAmount":4
+         },
+         {
+            "material":"textil, bomull",
+            "materialAmount":5
+         },
+         {
+            "material":"fårull",
+            "materialAmount":2
+         },
+         {
+            "material":"spån",
+            "materialAmount":1
+         },
+         {
+            "material":"mahogny",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, halvylle",
+            "materialAmount":2
+         },
+         {
+            "material":"sten - skiffersten",
+            "materialAmount":1
+         },
+         {
+            "material":"porslin",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, plåt - falsad, förskjutna hakfals",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - stänk- och sprutputs",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, takpannor - lertegel, enkupiga",
+            "materialAmount":1
+         },
+         {
+            "material":"papp",
+            "materialAmount":1
+         },
+         {
+            "material":"lin",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, kamlott",
+            "materialAmount":1
+         },
+         {
+            "material":"takpannor - lertegel, enkupiga",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - sprit, trä - träpanel, locklistpanel",
+            "materialAmount":1
+         },
+         {
+            "material":"trä, murverk - natursten, murverk - tegel, trä - stolpverk, murverk - natursten",
+            "materialAmount":1
+         },
+         {
+            "material":"puts - sprit, puts",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - tegel, murverk - natursten, murverk",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, sten - skiffersten, takpannor - glaserade",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"kina (cn)",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"ull",
+            "materialAmount":1
+         },
+         {
+            "material":"metall",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige (se)",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":553,
+      "materialArray":[
+         {
+            "material":"lin",
+            "materialAmount":30
+         },
+         {
+            "material":"ylle, stoppning, halm*",
+            "materialAmount":1
+         },
+         {
+            "material":"trä",
+            "materialAmount":22
+         },
+         {
+            "material":"färg",
+            "materialAmount":1
+         },
+         {
+            "material":"björk",
+            "materialAmount":9
+         },
+         {
+            "material":"tyg",
+            "materialAmount":9
+         },
+         {
+            "material":"mullbärssilke",
+            "materialAmount":1
+         },
+         {
+            "material":"textilfiber",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle",
+            "materialAmount":15
+         },
+         {
+            "material":"ylle",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, linne",
+            "materialAmount":34
+         },
+         {
+            "material":"textil, ylle, vadmal",
+            "materialAmount":8
+         },
+         {
+            "material":"textil, ylle, kalmink",
+            "materialAmount":1
+         },
+         {
+            "material":"mässing",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, siden",
+            "materialAmount":23
+         },
+         {
+            "material":"skinn",
+            "materialAmount":2
+         },
+         {
+            "material":"textil",
+            "materialAmount":19
+         },
+         {
+            "material":"silke",
+            "materialAmount":12
+         },
+         {
+            "material":"metall",
+            "materialAmount":7
+         },
+         {
+            "material":"papper",
+            "materialAmount":30
+         },
+         {
+            "material":"siden",
+            "materialAmount":6
+         },
+         {
+            "material":"kläde/ruvdda",
+            "materialAmount":1
+         },
+         {
+            "material":"silver/silbba",
+            "materialAmount":1
+         },
+         {
+            "material":"tyg/tujgga",
+            "materialAmount":1
+         },
+         {
+            "material":"limfärg",
+            "materialAmount":2
+         },
+         {
+            "material":"stoff",
+            "materialAmount":1
+         },
+         {
+            "material":"silver",
+            "materialAmount":5
+         },
+         {
+            "material":"bomull",
+            "materialAmount":35
+         },
+         {
+            "material":"textil, halvsilke",
+            "materialAmount":10
+         },
+         {
+            "material":"textil, bomull",
+            "materialAmount":27
+         },
+         {
+            "material":"textil, ylle, kläde",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, halvylle",
+            "materialAmount":13
+         },
+         {
+            "material":"textil, halvylle, verken",
+            "materialAmount":2
+         },
+         {
+            "material":"fårull",
+            "materialAmount":14
+         },
+         {
+            "material":"ull",
+            "materialAmount":6
+         },
+         {
+            "material":"papier-maché",
+            "materialAmount":3
+         },
+         {
+            "material":"textil, halvbomull",
+            "materialAmount":5
+         },
+         {
+            "material":"tenn",
+            "materialAmount":3
+         },
+         {
+            "material":"vaxduk",
+            "materialAmount":1
+         },
+         {
+            "material":"furu",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, ylle, kamlott",
+            "materialAmount":5
+         },
+         {
+            "material":"väv",
+            "materialAmount":1
+         },
+         {
+            "material":"järn",
+            "materialAmount":4
+         },
+         {
+            "material":"textil, bomull, rips",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull, kattun",
+            "materialAmount":9
+         },
+         {
+            "material":"textil, bomull, kypert",
+            "materialAmount":1
+         },
+         {
+            "material":"tyll",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, siden, brokad",
+            "materialAmount":2
+         },
+         {
+            "material":"skinn/läder/pergament",
+            "materialAmount":3
+         },
+         {
+            "material":"textil, linong",
+            "materialAmount":3
+         },
+         {
+            "material":"porslin",
+            "materialAmount":6
+         },
+         {
+            "material":"gips",
+            "materialAmount":1
+         },
+         {
+            "material":"rotting",
+            "materialAmount":1
+         },
+         {
+            "material":"oljefärg",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, tyll",
+            "materialAmount":5
+         },
+         {
+            "material":"silverspets",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, moaré",
+            "materialAmount":2
+         },
+         {
+            "material":"hår",
+            "materialAmount":2
+         },
+         {
+            "material":"animaliskt material",
+            "materialAmount":2
+         },
+         {
+            "material":"vadmal",
+            "materialAmount":1
+         },
+         {
+            "material":"vax",
+            "materialAmount":3
+         },
+         {
+            "material":"glas",
+            "materialAmount":4
+         },
+         {
+            "material":"papp",
+            "materialAmount":1
+         },
+         {
+            "material":"spån",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomullssammet",
+            "materialAmount":1
+         },
+         {
+            "material":"pärlemor",
+            "materialAmount":1
+         },
+         {
+            "material":"bläck",
+            "materialAmount":3
+         },
+         {
+            "material":"läder",
+            "materialAmount":3
+         },
+         {
+            "material":"textil, linne, kypert",
+            "materialAmount":4
+         },
+         {
+            "material":"koppar",
+            "materialAmount":1
+         },
+         {
+            "material":"metall, gulmetall",
+            "materialAmount":1
+         },
+         {
+            "material":"kattun",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, halvlinne",
+            "materialAmount":8
+         },
+         {
+            "material":"metall, järn",
+            "materialAmount":1
+         },
+         {
+            "material":"mahogny",
+            "materialAmount":2
+         },
+         {
+            "material":"linne",
+            "materialAmount":1
+         },
+         {
+            "material":"jute",
+            "materialAmount":2
+         },
+         {
+            "material":"hakar",
+            "materialAmount":1
+         },
+         {
+            "material":"hyskor",
+            "materialAmount":1
+         },
+         {
+            "material":"planschetter",
+            "materialAmount":1
+         },
+         {
+            "material":"metall, tenntråd",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, sammet",
+            "materialAmount":1
+         },
+         {
+            "material":"guldtråd",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull, sammet",
+            "materialAmount":1
+         },
+         {
+            "material":"näver, flaknäver",
+            "materialAmount":1
+         },
+         {
+            "material":"trä, björkrot",
+            "materialAmount":1
+         },
+         {
+            "material":"silverband",
+            "materialAmount":1
+         },
+         {
+            "material":"pärlor",
+            "materialAmount":1
+         },
+         {
+            "material":"nöthår",
+            "materialAmount":1
+         },
+         {
+            "material":"puts - sprit",
+            "materialAmount":2
+         },
+         {
+            "material":"murverk - natursten",
+            "materialAmount":2
+         },
+         {
+            "material":"puts, puts - sprit",
+            "materialAmount":14
+         },
+         {
+            "material":"murverk, murverk - natursten",
+            "materialAmount":8
+         },
+         {
+            "material":"sten - skiffersten",
+            "materialAmount":3
+         },
+         {
+            "material":"silkespets",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - natursten, murverk - natursten",
+            "materialAmount":4
+         },
+         {
+            "material":"sidenatlas",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - sprit, puts",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, murverk - natursten, murverk - tegel",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, sten - skiffersten, ej utrett",
+            "materialAmount":1
+         },
+         {
+            "material":"trä - träpanel, lockpanel",
+            "materialAmount":1
+         },
+         {
+            "material":"sten - skiffersten, plåt - falsad, förskjutna hakfals",
+            "materialAmount":2
+         },
+         {
+            "material":"murverk, murverk - natursten, granit",
+            "materialAmount":3
+         },
+         {
+            "material":"plåt - koppar, sten - skiffersten",
+            "materialAmount":4
+         },
+         {
+            "material":"puts, puts",
+            "materialAmount":3
+         },
+         {
+            "material":"murverk, murverk",
+            "materialAmount":5
+         },
+         {
+            "material":"plåt",
+            "materialAmount":2
+         },
+         {
+            "material":"trä - spån, trä - spån",
+            "materialAmount":1
+         },
+         {
+            "material":"trä - liggtimmer, trä - liggtimmer",
+            "materialAmount":2
+         },
+         {
+            "material":"plåt - koppar, takpannor - betong",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, plåt - falsad, småplåtsformat, plåt - falsad, förskjutna hakfals",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - sprit, trä - träpanel, locklistpanel",
+            "materialAmount":2
+         },
+         {
+            "material":"takpannor - lertegel, enkupiga",
+            "materialAmount":2
+         },
+         {
+            "material":"plåt - koppar, plåt, takpannor - lertegel, enkupiga",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar",
+            "materialAmount":1
+         },
+         {
+            "material":"tegel, tegel",
+            "materialAmount":1
+         },
+         {
+            "material":"ull/bomull, halvylle",
+            "materialAmount":1
+         },
+         {
+            "material":"smörpapper",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, takpannor - betong, plåt - falsad, småplåtsformat",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - falsad, storplåtsformat, takpannor - lertegel",
+            "materialAmount":1
+         },
+         {
+            "material":"trä - träpanel, trä - träpanel, stående",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, takpannor - lertegel, enkupiga",
+            "materialAmount":2
+         },
+         {
+            "material":"halm",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, murverk, trä",
+            "materialAmount":1
+         },
+         {
+            "material":"takpannor",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - slät",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, murverk - natursten, sandsten",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, trä - spån, kluvet",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"finland (fi)",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":3,
+      "materialArray":[
+         {
+            "material":"keramik",
+            "materialAmount":1
+         },
+         {
+            "material":"läder",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"frankrike (fr)",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":3,
+      "materialArray":[
+         {
+            "material":"textil, linne",
+            "materialAmount":1
+         },
+         {
+            "material":"papper",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, siden",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"storbritannien (gb)",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":18,
+      "materialArray":[
+         {
+            "material":"felb",
+            "materialAmount":1
+         },
+         {
+            "material":"trä",
+            "materialAmount":2
+         },
+         {
+            "material":"silver",
+            "materialAmount":2
+         },
+         {
+            "material":"metall",
+            "materialAmount":1
+         },
+         {
+            "material":"textil",
+            "materialAmount":2
+         },
+         {
+            "material":"bomull",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, halvylle",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull",
+            "materialAmount":2
+         },
+         {
+            "material":"bomull, papper",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull, kattun",
+            "materialAmount":1
+         },
+         {
+            "material":"lin",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, siden",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle",
+            "materialAmount":1
+         },
+         {
+            "material":"linne",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"syrien (sy)",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"silver",
+            "materialAmount":1
+         },
+         {
+            "material":"metall",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"norge (no)",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"textil, bomull",
+            "materialAmount":1
+         },
+         {
+            "material":"lin",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"danmark (dk)",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"textil, bomull",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"estland (ee)",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"silke",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"danmark",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"limfärg",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, linne",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"england, storbritannien",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"bomull",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"österrike",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"bomull",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"pakistan (pk)",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"puts - sprit",
+            "materialAmount":1
+         },
+         {
+            "material":"trä",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"tyskland (de)",
+      "yearInterval":[
+         1800,
+         1850
+      ],
+      "amount":3,
+      "materialArray":[
+         {
+            "material":"murverk - natursten",
+            "materialAmount":1
+         },
+         {
+            "material":"sten - skiffersten",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - falsad, förskjutna hakfals",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige (se)",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":646,
+      "materialArray":[
+         {
+            "material":"papper",
+            "materialAmount":20
+         },
+         {
+            "material":"trä",
+            "materialAmount":23
+         },
+         {
+            "material":"bomull",
+            "materialAmount":66
+         },
+         {
+            "material":"porslin",
+            "materialAmount":35
+         },
+         {
+            "material":"textil",
+            "materialAmount":33
+         },
+         {
+            "material":"vegetabiliska fibrer",
+            "materialAmount":3
+         },
+         {
+            "material":"textil, bomull",
+            "materialAmount":30
+         },
+         {
+            "material":"textil, siden",
+            "materialAmount":26
+         },
+         {
+            "material":"silke",
+            "materialAmount":14
+         },
+         {
+            "material":"tenn",
+            "materialAmount":6
+         },
+         {
+            "material":"bok",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle",
+            "materialAmount":14
+         },
+         {
+            "material":"papier-maché",
+            "materialAmount":3
+         },
+         {
+            "material":"spån",
+            "materialAmount":1
+         },
+         {
+            "material":"mahogny",
+            "materialAmount":3
+         },
+         {
+            "material":"textil, tyll",
+            "materialAmount":4
+         },
+         {
+            "material":"spets",
+            "materialAmount":9
+         },
+         {
+            "material":"textil, ylle, kläde",
+            "materialAmount":4
+         },
+         {
+            "material":"pärlor",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, barège",
+            "materialAmount":1
+         },
+         {
+            "material":"kattun",
+            "materialAmount":3
+         },
+         {
+            "material":"textil, ylle, chalon",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, halvylle",
+            "materialAmount":17
+         },
+         {
+            "material":"textil, linne",
+            "materialAmount":16
+         },
+         {
+            "material":"skinn/läder/pergament",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, linong",
+            "materialAmount":1
+         },
+         {
+            "material":"lin",
+            "materialAmount":16
+         },
+         {
+            "material":"vax",
+            "materialAmount":3
+         },
+         {
+            "material":"fårull",
+            "materialAmount":22
+         },
+         {
+            "material":"textil, halvlinne",
+            "materialAmount":2
+         },
+         {
+            "material":"lergods",
+            "materialAmount":1
+         },
+         {
+            "material":"metall",
+            "materialAmount":10
+         },
+         {
+            "material":"siden",
+            "materialAmount":5
+         },
+         {
+            "material":"linne",
+            "materialAmount":5
+         },
+         {
+            "material":"celluloid",
+            "materialAmount":1
+         },
+         {
+            "material":"ull",
+            "materialAmount":9
+         },
+         {
+            "material":"glas- och metallpärlor, silke",
+            "materialAmount":1
+         },
+         {
+            "material":"ylle",
+            "materialAmount":5
+         },
+         {
+            "material":"järn",
+            "materialAmount":2
+         },
+         {
+            "material":"olja",
+            "materialAmount":1
+         },
+         {
+            "material":"duk",
+            "materialAmount":2
+         },
+         {
+            "material":"oljefärg",
+            "materialAmount":2
+         },
+         {
+            "material":"strå",
+            "materialAmount":1
+         },
+         {
+            "material":"ren",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, halvsilke",
+            "materialAmount":5
+         },
+         {
+            "material":"silver",
+            "materialAmount":3
+         },
+         {
+            "material":"tyg",
+            "materialAmount":18
+         },
+         {
+            "material":"svartvit påsikt",
+            "materialAmount":1
+         },
+         {
+            "material":"läder",
+            "materialAmount":5
+         },
+         {
+            "material":"limfärg",
+            "materialAmount":1
+         },
+         {
+            "material":"vaxduk",
+            "materialAmount":3
+         },
+         {
+            "material":"furu",
+            "materialAmount":6
+         },
+         {
+            "material":"mullbärssilke",
+            "materialAmount":2
+         },
+         {
+            "material":"vitmetall",
+            "materialAmount":1
+         },
+         {
+            "material":"mässing",
+            "materialAmount":3
+         },
+         {
+            "material":"nöthår",
+            "materialAmount":2
+         },
+         {
+            "material":"tagel",
+            "materialAmount":2
+         },
+         {
+            "material":"kläde",
+            "materialAmount":4
+         },
+         {
+            "material":"silvergalon",
+            "materialAmount":2
+         },
+         {
+            "material":"järntråd",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull, muslin",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, sammet",
+            "materialAmount":3
+         },
+         {
+            "material":"textil, halvylle, verken",
+            "materialAmount":1
+         },
+         {
+            "material":"björk",
+            "materialAmount":2
+         },
+         {
+            "material":"lin/bomull",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull, kambrik",
+            "materialAmount":1
+         },
+         {
+            "material":"bomullsgas",
+            "materialAmount":1
+         },
+         {
+            "material":"ben",
+            "materialAmount":1
+         },
+         {
+            "material":"skinn",
+            "materialAmount":4
+         },
+         {
+            "material":"får",
+            "materialAmount":5
+         },
+         {
+            "material":"negativ, polyester",
+            "materialAmount":1
+         },
+         {
+            "material":"ullgarn",
+            "materialAmount":1
+         },
+         {
+            "material":"positiv kopia",
+            "materialAmount":1
+         },
+         {
+            "material":"animaliskt material",
+            "materialAmount":2
+         },
+         {
+            "material":"glas",
+            "materialAmount":7
+         },
+         {
+            "material":"textil, ylle, vadmal",
+            "materialAmount":4
+         },
+         {
+            "material":"textil, ylle, kypert",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull, flanell",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, muslin",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, siden, rips",
+            "materialAmount":1
+         },
+         {
+            "material":"rotting",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - sprit",
+            "materialAmount":11
+         },
+         {
+            "material":"papp",
+            "materialAmount":2
+         },
+         {
+            "material":"viella",
+            "materialAmount":1
+         },
+         {
+            "material":"trä - spån",
+            "materialAmount":1
+         },
+         {
+            "material":"metall, se beskrivning",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - natursten, murverk",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - falsad, storplåtsformat",
+            "materialAmount":2
+         },
+         {
+            "material":"verken",
+            "materialAmount":1
+         },
+         {
+            "material":"atlassiden",
+            "materialAmount":1
+         },
+         {
+            "material":"fodertyg",
+            "materialAmount":1
+         },
+         {
+            "material":"sten - skiffersten",
+            "materialAmount":5
+         },
+         {
+            "material":"ek",
+            "materialAmount":1
+         },
+         {
+            "material":"korg",
+            "materialAmount":1
+         },
+         {
+            "material":"sammet",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - natursten",
+            "materialAmount":3
+         },
+         {
+            "material":"plåt - koppar, plåt - falsad, förskjutna hakfals",
+            "materialAmount":1
+         },
+         {
+            "material":"myrten",
+            "materialAmount":1
+         },
+         {
+            "material":"stål",
+            "materialAmount":1
+         },
+         {
+            "material":"elfenben",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, murverk - natursten",
+            "materialAmount":4
+         },
+         {
+            "material":"träull",
+            "materialAmount":1
+         },
+         {
+            "material":"silkespets",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - stänk- och sprutputs",
+            "materialAmount":2
+         },
+         {
+            "material":"murverk - natursten, murverk - natursten",
+            "materialAmount":8
+         },
+         {
+            "material":"plåt - koppar, takpannor - lertegel, enkupiga",
+            "materialAmount":5
+         },
+         {
+            "material":"murverk, murverk - natursten, murverk - tegel",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, sten - skiffersten, ej utrett",
+            "materialAmount":1
+         },
+         {
+            "material":"puts - sprit",
+            "materialAmount":3
+         },
+         {
+            "material":"biskviporslin",
+            "materialAmount":1
+         },
+         {
+            "material":"filt",
+            "materialAmount":1
+         },
+         {
+            "material":"sten - skiffersten, plåt - falsad, förskjutna hakfals",
+            "materialAmount":1
+         },
+         {
+            "material":"bomullsbatist",
+            "materialAmount":1
+         },
+         {
+            "material":"halvlinne",
+            "materialAmount":1
+         },
+         {
+            "material":"färg",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - bandtäckning",
+            "materialAmount":1
+         },
+         {
+            "material":"trä - träpanel, trä - träpanel, locklistpanel",
+            "materialAmount":1
+         },
+         {
+            "material":"trä, trä - liggtimmer",
+            "materialAmount":1
+         },
+         {
+            "material":"bomullskypert",
+            "materialAmount":1
+         },
+         {
+            "material":"kalvskinn",
+            "materialAmount":1
+         },
+         {
+            "material":"satäng",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, murverk - natursten, sandsten, murverk - natursten, kalksten, murverk - natursten, sandsten",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, sten - skiffersten",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, murverk - tegel, murverk - natursten, murverk - tegel, munkförband",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt, plåt - skivtäckning",
+            "materialAmount":1
+         },
+         {
+            "material":"takpannor - lertegel, enkupiga",
+            "materialAmount":3
+         },
+         {
+            "material":"puts, puts - kvastad, puts - mönsterputs",
+            "materialAmount":1
+         },
+         {
+            "material":"ej utrett, puts - sprit",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, murverk - natursten, granit",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, murverk - natursten, sandsten",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt, plåt - koppar, takpannor - lertegel, enkupiga",
+            "materialAmount":1
+         },
+         {
+            "material":"tegel - fasadtegel, tegel - fasadtegel",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - tegel, murverk - natursten",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar",
+            "materialAmount":2
+         },
+         {
+            "material":"puts, puts - sprit, tegel",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - sprit, trä - träpanel, locklistpanel",
+            "materialAmount":2
+         },
+         {
+            "material":"trä, murverk - natursten, trä - stolpverk, murverk - natursten",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk",
+            "materialAmount":1
+         },
+         {
+            "material":"sten - skiffersten, takpannor - lertegel, enkupiga",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - förzinkad, plåt - koppar, takpannor - betong",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, murverk",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, trä - träpanel, puts",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - tegel, murverk - natursten, murverk - natursten",
+            "materialAmount":1
+         },
+         {
+            "material":"gasväv",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, murverk - natursten, kalksten",
+            "materialAmount":1
+         },
+         {
+            "material":"trä - spån, kluvet, takpannor - lertegel, enkupiga",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts",
+            "materialAmount":2
+         },
+         {
+            "material":"sten, sten - granit",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt, sten - skiffersten",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts, puts - stänk- och sprutputs",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - kvastad",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylleplysch",
+            "materialAmount":2
+         },
+         {
+            "material":"bomullssatin",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, trä, murverk",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, fasadmaterial lika med stommen",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - natursten, sandsten, murverk - natursten",
+            "materialAmount":1
+         },
+         {
+            "material":"trä - spån, takpannor - lertegel, tvåkupiga",
+            "materialAmount":1
+         },
+         {
+            "material":"valnöt",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, trä - träpanel, puts - sprit",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"tyskland (de)",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":8,
+      "materialArray":[
+         {
+            "material":"textil, siden",
+            "materialAmount":1
+         },
+         {
+            "material":"skinn/läder/pergament",
+            "materialAmount":1
+         },
+         {
+            "material":"porslin",
+            "materialAmount":1
+         },
+         {
+            "material":"papper",
+            "materialAmount":1
+         },
+         {
+            "material":"horn",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - natursten, murverk - natursten",
+            "materialAmount":1
+         },
+         {
+            "material":"takpannor - lertegel, enkupiga",
+            "materialAmount":1
+         },
+         {
+            "material":"stål",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"frankrike (fr)",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"halm",
+            "materialAmount":1
+         },
+         {
+            "material":"textil",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":446,
+      "materialArray":[
+         {
+            "material":"trä",
+            "materialAmount":15
+         },
+         {
+            "material":"gips",
+            "materialAmount":1
+         },
+         {
+            "material":"rotting",
+            "materialAmount":1
+         },
+         {
+            "material":"spets",
+            "materialAmount":2
+         },
+         {
+            "material":"porslin",
+            "materialAmount":4
+         },
+         {
+            "material":"bomull",
+            "materialAmount":176
+         },
+         {
+            "material":"lin",
+            "materialAmount":17
+         },
+         {
+            "material":"silke",
+            "materialAmount":6
+         },
+         {
+            "material":"flamgarn",
+            "materialAmount":22
+         },
+         {
+            "material":"halvylle",
+            "materialAmount":9
+         },
+         {
+            "material":"ull",
+            "materialAmount":16
+         },
+         {
+            "material":"textil, halvlinne",
+            "materialAmount":4
+         },
+         {
+            "material":"papper",
+            "materialAmount":11
+         },
+         {
+            "material":"läder",
+            "materialAmount":5
+         },
+         {
+            "material":"mässing",
+            "materialAmount":3
+         },
+         {
+            "material":"animaliskt material",
+            "materialAmount":3
+         },
+         {
+            "material":"metall",
+            "materialAmount":8
+         },
+         {
+            "material":"textil",
+            "materialAmount":17
+         },
+         {
+            "material":"textil, ylle",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull, kattun",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, siden",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, halvylle",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, linne",
+            "materialAmount":5
+         },
+         {
+            "material":"textil, ylle, filt",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, halvylle, verken",
+            "materialAmount":2
+         },
+         {
+            "material":"kashmirull",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, vadmal",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, siden, brokad",
+            "materialAmount":1
+         },
+         {
+            "material":"tyll",
+            "materialAmount":1
+         },
+         {
+            "material":"skinn/läder/pergament",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull",
+            "materialAmount":6
+         },
+         {
+            "material":"plåt - korrugerad",
+            "materialAmount":1
+         },
+         {
+            "material":"ej utrett",
+            "materialAmount":1
+         },
+         {
+            "material":"takpannor - betong",
+            "materialAmount":1
+         },
+         {
+            "material":"tyg",
+            "materialAmount":9
+         },
+         {
+            "material":"järn",
+            "materialAmount":1
+         },
+         {
+            "material":"stål",
+            "materialAmount":1
+         },
+         {
+            "material":"ylle",
+            "materialAmount":2
+         },
+         {
+            "material":"linne",
+            "materialAmount":3
+         },
+         {
+            "material":"cellulosafiber",
+            "materialAmount":1
+         },
+         {
+            "material":"halvsiden",
+            "materialAmount":2
+         },
+         {
+            "material":"halvlinne",
+            "materialAmount":1
+         },
+         {
+            "material":"kartong",
+            "materialAmount":3
+         },
+         {
+            "material":"siden",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, ylle, moaré",
+            "materialAmount":1
+         },
+         {
+            "material":"ben, horn",
+            "materialAmount":1
+         },
+         {
+            "material":"glas",
+            "materialAmount":1
+         },
+         {
+            "material":"fårull",
+            "materialAmount":1
+         },
+         {
+            "material":"sidenatlas",
+            "materialAmount":1
+         },
+         {
+            "material":"koppar",
+            "materialAmount":1
+         },
+         {
+            "material":"vax",
+            "materialAmount":1
+         },
+         {
+            "material":"horn",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - natursten, murverk - natursten",
+            "materialAmount":7
+         },
+         {
+            "material":"plåt - koppar",
+            "materialAmount":2
+         },
+         {
+            "material":"trä - spån, trä - träpanel, trä - spån, trä - träpanel",
+            "materialAmount":1
+         },
+         {
+            "material":"trä, trä - liggtimmer, trä - liggtimmer, fyrkantsvirke med utknut",
+            "materialAmount":1
+         },
+         {
+            "material":"celluloid",
+            "materialAmount":1
+         },
+         {
+            "material":"gummi",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts",
+            "materialAmount":1
+         },
+         {
+            "material":"lingarn",
+            "materialAmount":1
+         },
+         {
+            "material":"vadmal",
+            "materialAmount":1
+         },
+         {
+            "material":"skinn",
+            "materialAmount":1
+         },
+         {
+            "material":"björk",
+            "materialAmount":1
+         },
+         {
+            "material":"spegelglas",
+            "materialAmount":1
+         },
+         {
+            "material":"galoner",
+            "materialAmount":1
+         },
+         {
+            "material":"papp",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - natursten",
+            "materialAmount":1
+         },
+         {
+            "material":"filt",
+            "materialAmount":1
+         },
+         {
+            "material":"puts - sprit",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, ylle, kypert",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - sprit, puts",
+            "materialAmount":1
+         },
+         {
+            "material":"lärft",
+            "materialAmount":1
+         },
+         {
+            "material":"glanspapper",
+            "materialAmount":1
+         },
+         {
+            "material":"trä - träpanel, lockpanel",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - falsad, förskjutna hakfals",
+            "materialAmount":1
+         },
+         {
+            "material":"siden/sidencrepe",
+            "materialAmount":1
+         },
+         {
+            "material":"silvergalon",
+            "materialAmount":1
+         },
+         {
+            "material":"satäng",
+            "materialAmount":1
+         },
+         {
+            "material":"siden, georgette",
+            "materialAmount":1
+         },
+         {
+            "material":"päls",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - slät",
+            "materialAmount":2
+         },
+         {
+            "material":"puts, puts - sprit",
+            "materialAmount":6
+         },
+         {
+            "material":"murverk - tegel, murverk - tegel",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - falsad, storplåtsformat, takpannor - lertegel, enkupiga",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - sprit, puts - kalkcementputs",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, sten - skiffersten, takpannor - lertegel",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, murverk",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - natursten, murverk - natursten, kalksten",
+            "materialAmount":1
+         },
+         {
+            "material":"sten - skiffersten",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, murverk - natursten, kalksten, murverk - natursten, murverk - natursten, sandsten",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, murverk - natursten",
+            "materialAmount":3
+         },
+         {
+            "material":"takpannor - betong, takpannor - lertegel, enkupiga",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, trä - träpanel, puts - sprit, trä - träpanel, lockpanel",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk, trä, trä, murverk - natursten",
+            "materialAmount":1
+         },
+         {
+            "material":"murverk - natursten, ej utrett",
+            "materialAmount":1
+         },
+         {
+            "material":"säv",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - bandtäckning, plåt - förzinkad",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - stänk- och sprutputs",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt",
+            "materialAmount":1
+         },
+         {
+            "material":"sten - skiffersten, trä - spån",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - koppar, sten - skiffersten",
+            "materialAmount":1
+         },
+         {
+            "material":"plåt - förzinkad, takpannor - lertegel, enkupiga",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"storbritannien (gb)",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":10,
+      "materialArray":[
+         {
+            "material":"trä",
+            "materialAmount":1
+         },
+         {
+            "material":"björk",
+            "materialAmount":1
+         },
+         {
+            "material":"papper",
+            "materialAmount":2
+         },
+         {
+            "material":"bomull",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, ylle, kläde",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, linne",
+            "materialAmount":1
+         },
+         {
+            "material":"tyll",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - sprit",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"kongo",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"textil, bomull",
+            "materialAmount":1
+         },
+         {
+            "material":"bomull",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"norge (no)",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":3,
+      "materialArray":[
+         {
+            "material":"läder",
+            "materialAmount":1
+         },
+         {
+            "material":"trä",
+            "materialAmount":1
+         },
+         {
+            "material":"textil",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"indonesien",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"silke",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, tyll",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"el salvador",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"ull",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"danmark (dk)",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"siden",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"estland (ee)",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":3,
+      "materialArray":[
+         {
+            "material":"lin",
+            "materialAmount":2
+         },
+         {
+            "material":"fårull",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"oceanien",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"textil, halvylle",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"australien",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":3,
+      "materialArray":[
+         {
+            "material":"textil, linne",
+            "materialAmount":2
+         },
+         {
+            "material":"textil, ylle",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"kina (cn)",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"bomull",
+            "materialAmount":1
+         },
+         {
+            "material":"textil, bomull",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"syrien (sy)",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"textil, siden",
+            "materialAmount":1
+         },
+         {
+            "material":"textil",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"storbritannien",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"textil, bomull",
+            "materialAmount":1
+         },
+         {
+            "material":"textil",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"österrike",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":3,
+      "materialArray":[
+         {
+            "material":"lin",
+            "materialAmount":1
+         },
+         {
+            "material":"textil: bomullspiké",
+            "materialAmount":1
+         },
+         {
+            "material":"textil",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"finland (fi)",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"bomull",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"frankrike",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":3,
+      "materialArray":[
+         {
+            "material":"metall, gulmetall",
+            "materialAmount":1
+         },
+         {
+            "material":"spets",
+            "materialAmount":1
+         },
+         {
+            "material":"puts, puts - sprit",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"storbritannien och nordirland",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"lin",
+            "materialAmount":1
+         },
+         {
+            "material":"trä",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"ryssland",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"silke",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sve",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"mässing",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"england, storbritannien",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"puts - sprit",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"england",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"kartong",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"sverige, tyskland",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"bomull",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"danmark",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"papper",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"spanien (es)",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"kläde",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"elfenbenskusten, liberia",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"takpannor - lertegel, tvåkupiga",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"pakistan (pk)",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":2,
+      "materialArray":[
+         {
+            "material":"puts, puts - sprit",
+            "materialAmount":1
+         },
+         {
+            "material":"läder",
+            "materialAmount":1
+         }
+      ]
+   },
+   {
+      "placeName":"tyskland",
+      "yearInterval":[
+         1850,
+         1900
+      ],
+      "amount":1,
+      "materialArray":[
+         {
+            "material":"plåt, trä - spån",
+            "materialAmount":1
+         }
+      ]
+   }
+]
