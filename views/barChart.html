@@ -1,7 +1,7 @@
 
 <div class="container cf">
     <div>
-       <h2>Tillverkat stuff i olika länder per land över årtal</h2>
+       <h2>Mängd antikviteter från länder beroende av år</h2>
        
  		<div class="graph" style="width:70%"></div>
  		
@@ -10,7 +10,7 @@
 
  		<div ng-init="newCountries"></div>
 
-		<select style="width:85%" ng-model='selectedCountry' ng-change="provideCountry(selectedCountry)" ng-options='country.placeName for country in listCountries | orderBy: country.placeName'></select>
+		<select style="width:85%" ng-model='selectedCountry' ng-change="provideCountry(selectedCountry)" ng-options='country for country in listCountries | orderBy: placeName'></select>
 
     </div>
 </div>

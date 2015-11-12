@@ -11,19 +11,83 @@
 
 		$scope.countries = [];
 		$scope.listCountries = [];
+		var theCountries = [];
 
 		$.getJSON("geoData/all.json", function(json) {
+			//$scope.theCountries = json;
 			for (var i = 0 ;  i < json.length ; i++) {	
 				//if (containsCountry(json[i].placeName, $scope.listCountries) == -1) {	
 				if (json[i].placeName.toLowerCase() !== "sverige" && json[i].placeName.toLowerCase() !== "sverige (se)") {	
-					$scope.listCountries.push(json[i]);
+					
+					
+
+					json[i].placeName = cleanCountryString(json[i].placeName);
+
+					pushObject = json[i];
+
+					var indexes = theCountries.multiIndexOf(pushObject.placeName);				
+					
+					if (indexes.length == 0) {
+						theCountries.push(pushObject);
+						
+					}
+					else if (indexes.lenght != 0){
+						
+						var check = [true];
+						for (var v = 0 ; v < indexes.length ; v++){
+							if (check.length == (indexes.length)){
+								theCountries.push(pushObject);
+								check = [];
+							}
+							if (theCountries[indexes[v]].yearInterval[0] != pushObject.yearInterval[0]){
+								 check.push(true);
+							}	
+						}
+					}
+					
+					/*
+					else {
+						for (var j = 0 ; j < theCountries.length ; j++) {
+							//console.log(theCountries[j].placeName + " "+ pushObject.placeName);
+							if (theCountries[j].placeName == pushObject.placeName && theCountries[j].yearInterval[0] == pushObject.yearInterval[0]) {
+								console.log("yay");
+								theCountries[j].amount = theCountries[j].amount + pushObject.amount;
+								
+							}
+						}
+
+					}	*/
+
+					if ($scope.listCountries.indexOf(pushObject.placeName.toLowerCase()) == -1) {
+						$scope.listCountries.push(pushObject.placeName.toLowerCase());
+					}
 				}
 			}
-			
+
 		});  
 
+		function addToCountry(countryObj, array) {
+			
+
+		}
+
+		function cleanCountryString(country) {
+			var endVal = country.indexOf('(');
+			var nextVal = country.indexOf('?');	
+			var otherVal = country.indexOf(',');
+			if(endVal != -1){
+				return country.slice(0, endVal).replace(/\s+/g, '').replace(/\W/g, '');
+			}
+			else if (otherVal != -1) {
+				return country.slice(0,otherVal).replace(/\s+/g, '').replace(/\W/g, '');
+			}
+			else {
+				return country.replace(/\s+/g, '').replace(/\W/g, '');
+			}
+		}
+
 		var meanValues;
-		setTimeout(function(){ meanValues = calcMean($scope.listCountries); }, 700); 
+		setTimeout(function(){ meanValues = calcMean(theCountries); }, 700); 
 
 		function calcMean(array){
 			var counter = 0;
@@ -47,8 +111,7 @@
 		}
 
 		$scope.provideCountry = function(val) {
-			console.log(val);
-			getRightCountry($scope.listCountries, val.placeName);
+			getRightCountry(theCountries, val);
 		}
 
 	  	function getRightCountry(array, val) {
@@ -62,9 +125,9 @@
 		}
 
 		function containsCountry(obj, list) {
-			var i;
-			for (i = 0; i < list.length; i++) {
-				if (list[i].placeName === obj) {
+			
+			for (var i = 0; i < list.length; i++) {
+				if (list[i].placeName == obj) {
 					return i;
 				}
 			}
@@ -80,6 +143,17 @@
 			}
 			return -1;
 		}
+		
+		Array.prototype.multiIndexOf = function (country) { 
+		    var idxs = [];
+		    for (var i = this.length - 1; i >= 0; i--) {
+		        if (this[i].placeName === country) {
+		            idxs.push(i);
+		        }
+		    }
+		    return idxs;
+		};
+
 		
 		var barNum = 0;
 		function setBarClass(){
@@ -98,9 +172,6 @@
 		var yearSpanSeven = 0;
 		var yearSpanEight = 0;
 		var maxAmount = 1;
-
-
-	   console.log(means);
 
 		if(data == 0){
 			console.log("data is empty")
@@ -184,8 +255,7 @@
 		   .attr("id", function(d, j){ return "bar"+(j+1);})
 		   .text(function(d) { return "hej"})
 		   .on("mouseover", function(d,i){return [tooltip.style("visibility", "visible"), tooltip.text("snittimport: "+datasetMean[i])];})
-		   .on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px").text();
-	})
+		   .on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px").text();})
 		   .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
 
 

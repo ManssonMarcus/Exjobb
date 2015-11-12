@@ -57,6 +57,10 @@
         templateUrl: 'views/barChart.html',
         controller: 'barController',
       })
+      .when('/scatter', {
+        templateUrl: 'views/scatter.html',
+        controller: 'scatterController',
+      })
       .otherwise({
         redirectTo: '/'
       });

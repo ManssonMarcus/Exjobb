@@ -492,7 +492,7 @@
       setPlotYear(startYear, thejson);
       snapValues[handle].innerHTML = startYear+"-"+ (startYear+50);
     });
-
+    
   }
 
 
