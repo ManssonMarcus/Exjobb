@@ -2315,16 +2315,16 @@
    {
       "CountryName":"USA",
       "CapitalName":"Washington",
-      "CapitalLatitude":" D.C.",
-      "CapitalLongitude":"38.883333",
+      "CapitalLatitude":"38.883333",
+      "CapitalLongitude":"-77.000000",
       "CountryCode":"-77.000000",
       "ContinentName":"US"
    },
    {
       "CountryName":"USA (US)",
       "CapitalName":"Washington",
-      "CapitalLatitude":" D.C.",
-      "CapitalLongitude":"38.883333",
+      "CapitalLatitude":"38.883333",
+      "CapitalLongitude":"-77.000000",
       "CountryCode":"-77.000000",
       "ContinentName":"US"
    },

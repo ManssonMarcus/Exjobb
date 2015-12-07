@@ -9,7 +9,10 @@
 	
 	function scatterController($scope, LocalStorage, QueryService, $timeout) {
 
+		
+
 		var materialObjects = [];
+		var dataArray = [];
 
 		$.getJSON("geoData/all.json", function(json) {
 			for (var i = 0 ; i < json.length ; i++ ) {
@@ -24,7 +27,9 @@
 							'material': material, 
 							'totalAmount': materialArray[j].materialAmount,
 							'yearAmountArray': placeAmountYear(json[i].yearInterval , materialArray[j].materialAmount) ,
-							'placeArray': [] 
+							'placeArray': [],
+							'y': 0,
+							'relationArray': [] 
 						});
 						
 						if (materialObjects[j].placeArray.indexOf(json[i].placeName) == -1) {
@@ -44,7 +49,7 @@
 					}
 				}
 			}
-			console.log(materialObjects);
+			//console.log(materialObjects);
 	    });
 
 
@@ -78,63 +83,103 @@
 			return -1;
 		}
 		function calcMean(array) {
-			var first = 0;
+
 			var meanArray = [
-	    		{'yearInterval': [1500,1550], 'mean': 0},
-	    		{'yearInterval': [1550,1600], 'mean': 0},
-	    		{'yearInterval': [1600,1650], 'mean': 0},
-	    		{'yearInterval': [1650,1700], 'mean': 0},
-	    		{'yearInterval': [1700,1750], 'mean': 0},
-	    		{'yearInterval': [1750,1800], 'mean': 0},
-	    		{'yearInterval': [1800,1850], 'mean': 0},
-	    		{'yearInterval': [1850,1900], 'mean': 0}
+	    		{'yearInterval': [1500,1550], 'mean': 0, 'count': 0},
+	    		{'yearInterval': [1550,1600], 'mean': 0, 'count': 0},
+	    		{'yearInterval': [1600,1650], 'mean': 0, 'count': 0},
+	    		{'yearInterval': [1650,1700], 'mean': 0, 'count': 0},
+	    		{'yearInterval': [1700,1750], 'mean': 0, 'count': 0},
+	    		{'yearInterval': [1750,1800], 'mean': 0, 'count': 0},
+	    		{'yearInterval': [1800,1850], 'mean': 0, 'count': 0},
+	    		{'yearInterval': [1850,1900], 'mean': 0, 'count': 0}
 	    	];
 			for (var i = 0 ; i < array.length ; i++) {
 
 				var yearAmountArray = array[i].yearAmountArray;
+				
 
 				for (var j = 0 ; j < yearAmountArray.length ; j++) {
-					first += yearAmountArray[0].amount;
-					meanArray[0].mean += yearAmountArray[0].amount
+					//if (yearAmountArray[j].amount != 0){
+						meanArray[j].mean += yearAmountArray[j].amount;
+						meanArray[j].count += 1;
+					//}
 					
 				}
 			}
-			
-			console.log(first);
-			console.log(meanArray);
+		
+			for (var i = 0 ; i < meanArray.length ; i++){
+				var mean = meanArray[i].mean;
+				var count = meanArray[i].count;
+				meanArray[i].mean =  mean/count;
+			}
+			//console.log(meanArray);
+			addRelation(meanArray);
 		}
 
 		setTimeout(function(){ calcMean(materialObjects)}, 1000);
 
-		function materialRelationMean(array) {
-			for (var i = 0 ; i < array ;  i++){
+		function addRelation(meanArray) {
 
+			for (var i = 0 ; i < materialObjects.length ;  i++){
+				var yearArray = materialObjects[i].yearAmountArray;
+				
+				var relation = []; 
+				for (var j = 0 ; j < yearArray.length ; j++) {
+					var val = yearArray[j].amount/meanArray[j].mean;
+					relation.push(val);
+				}
+				var tot = 0;
+				for (var k = (relation.length - 1) ; k > 0 ; k--){
+					tot += relation[k]-relation[k-1];
+
+				}
+				var meanRelation = tot/(relation.length);
+				materialObjects[i].y = meanRelation;
+				materialObjects[i].relationArray = relation;
+				
 			}
+			
+			
+			refineObjectArray()		
 
 		}
+		function refineObjectArray(){
+			
+			for (var i = 0 ; i < materialObjects.length ; i++){
+				if (materialObjects[i].totalAmount > 500) {
+					dataArray.push(materialObjects[i]);
+				} 
+			}
+			setDots();	
+		}
 
+		//The beginning of the scatterplot
 		var tooltip = d3.select("body")
 		    .append("div")
+		    .attr("class", "tooltip")	
 		    .style("position", "absolute")
 		    .style("z-index", "10")
 		    .style("visibility", "hidden")
 		    .style("background", "#FFF")
 		    .style("padding", "5px")
-		    .style("border-radius", "2px")
-		    .text("a simple tooltip");
+		    .style("border-radius", "2px");
 
-		var data = [[2,3], [1,-1], [11,4], [2,8], [1,6], [4,4], [7,10], [72,12]];
-   
+		
+		       
+		var data = [[2,3], [1,-1], [11,4], [2,8], [1,6], [4,4], [7,10], [72,45]]; 
+		var dataName = ["ewe", "600", "16", "1rtgf", "fg50", "1700", "10", "1900"];    
+
 	    var margin = {top: 20, right: 15, bottom: 60, left: 60}
-	      , width = 960 - margin.left - margin.right
-	      , height = 500 - margin.top - margin.bottom;
+	      , width = 560 - margin.left - margin.right
+	      , height = 400 - margin.top - margin.bottom;
 	    
 	    var x = d3.scale.linear()
-	              .domain([0, d3.max(data, function(d) { return d[0]; })])
+	              .domain([0, d3.max(data, function(d) { return 6000; })])
 	              .range([ 0, width ]);
 	    
 	    var y = d3.scale.linear()
-	    	      .domain([-10, d3.max(data, function(d) { return d[1]; })])
+	    	      .domain([-45, d3.max(data, function(d) { return d[1]; })])
 	    	      .range([ height, 0 ]);
 	 
 	    var chart = d3.select('.content')
@@ -142,6 +187,8 @@
 		.attr('width', width + margin.right + margin.left)
 		.attr('height', height + margin.top + margin.bottom)
 		.attr('class', 'chart')
+
+		
 		
 
 	    var main = chart.append('g')
@@ -171,17 +218,128 @@
 		.call(yAxis);
 
 	    var g = main.append("svg:g"); 
-	    
-	    g.selectAll("scatter-dots")
-	      .data(data)
-	      .enter().append("svg:circle")
-	          .attr("cx", function (d,i) { return x(d[0]); } )
-	          .attr("cy", function (d) { return y(d[1]); } )
-	          .attr("r", 8)
-	          .on("mouseover", function(d,i){ d3.select(this).attr("r", 12); return [tooltip.style("visibility", "visible"), tooltip.text("snittimport: ")];})
-		   	  .on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px").text();})
-		   	  .on("mouseout", function(){d3.select(this).attr("r", 8); return tooltip.style("visibility", "hidden");});
+	    function setDots(){
+		    g.selectAll("scatter-dots")
+		      .data(dataArray)
+		      .enter().append("svg:circle")
+		          .attr("cx", function (d,i) { return x(d.totalAmount); } )
+		          .attr("cy", function (d) { return y(d.y); } )
+		          .attr("r", 2)
+		          .style("fill", function(d) { 
+		          	
+		          	var wordlength = Math.floor(d.material.length/4);
 
+		          	var R = Math.floor(Math.random()*10);
+		          	var G = Math.floor(Math.random()*10);
+		          	var B = Math.floor(Math.random()*10);
+		          	return '#'+R+'c'+G+'e'+B+'9'; 
+		          })
+		          .on("mouseover", function(d,i){ 
+		          	d3.select(this).attr("r", 7); 
+		          	plot(d.placeArray);
+		          	
+		          	console.log(d);
+
+		          	tooltip.style("visibility", "visible");
+	          		tooltip.style("height", "250px");
+	          		tooltip.style("width", "20%");
+	          		tooltip.text(d.material);
+	          		tooltip.html("<p>"+d.material+"</p> <div class = 'graphTest'></div>"+"<div style='font-size: 50%; margin-top:-8px; margin-left:-20px;'>1500 --------- 1900</div>");
+		          	
+		          	
+
+		          	var dataset = [
+			          		d.relationArray[0],
+			          		d.relationArray[1],
+			          		d.relationArray[2],
+			          		d.relationArray[3],
+			          		d.relationArray[4],
+			          		d.relationArray[5],
+			          		d.relationArray[6],
+			          		d.relationArray[7]
+						];
+
+					var svg = d3.select(".graphTest")
+					   .append("svg")
+					   .attr("preserveAspectRatio", "xMidYMid")
+					   .attr("viewBox", "0 0 1100 500");
+
+					var svgRect = svg.selectAll("rect")
+					                  .data(dataset)
+					                  .enter();  
+
+		          	svgRect.append("rect")
+					   .attr("x", function(d, i){ return i * 120; }) 
+					   .attr("y", function(d){
+						    var yPos = 465 - (d);
+						    return yPos;
+					   })
+					   .attr("height", function(d){
+					      if(d==0) return 10; 
+					      return d*10;
+					   })
+					   .attr("width", 100)
+					   .attr("fill", function(d, i) { return "#f2e"; });
+
+
+		          })
+			   	  .on("mousemove", function(){
+			   	  	return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px").text();
+			   	  })
+			   	  .on("mouseout", function(){
+			   	  	d3.select(this).attr("r", 2); 
+			   	  	dePlot(); 
+			   	  	return tooltip.style("visibility", "hidden");
+			   	  });
+			   	  
+
+		}
+
+		//Kartan
+		var bombMap = new Datamap({
+	    	element: document.getElementById('map_bombs'),
+	    	scope: 'world',
+	    	geographyConfig: {
+		        popupOnHover: false,
+		        highlightOnHover: false
+    		},
+		    fills: {
+		        'dotFill' : '#E518FF',
+		        defaultFill: '#5CB207'
+		    }
+		});
+
+		function plot(occ){
+	      $.getJSON("data.json", function(json) {
+	        var array = [];
+	        for (var i = 0 ; i < json.length ; i++) {
+	          for (var j = 0 ; j < occ.length ; j++){
+	            if (json[i].CountryName.toLowerCase() == occ[j].toLowerCase()) {
+	              array.push({
+	                name: json[i].CountryName, 
+	                fillKey: 'dotFill', 
+	                latitude: json[i].CapitalLatitude, 
+	                longitude: json[i].CapitalLongitude, 
+	                radius: 3,
+	                "yearInterval" : occ[j].yearInterval
+	              });
+	            }
+	          }
+	        }   
+	        bombMap.bubbles(array, {
+	          popupTemplate: function(geo, array) {
+	            return "<div class='hoverinfo'>Bubble for " + array.name;
+	          }
+	        });
+	      });
+	    }
+	    function dePlot(){
+	    	bombMap.bubbles([], {
+	          popupTemplate: function(geo, array) {
+	            return "<div class='hoverinfo'>Bubble for " + array.name;
+	          }
+	        });
+	    }
 
 
 

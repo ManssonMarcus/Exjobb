@@ -13,13 +13,29 @@
     stroke: black;
     fill: none;
 }
-
-circle {
-    fill: steelblue;
+div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    font-size: 27px;
+    opacity: 0.8;		
 }
 
+#parent {
+  display: flex;
+}
+.graphTest {
+	margin-right:-220px;
+    width: 49%;
+    margin: 0 auto;
+}
 
 </style>
-<div class='content'>
-          <!-- /the chart goes here -->
+<div id="parent">
+
+ 		
+	<div class='content'>
+	          <!-- /the chart goes here -->
+	</div>
+
+	<div style="width: 50%" id="map_bombs"></div>
 </div>

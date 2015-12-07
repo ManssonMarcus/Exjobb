@@ -201,6 +201,7 @@
 		var barSize = h/(maxAmount + putDown);
 		var barPos = 465;
 
+
 		var dataset = [yearSpanOne, yearSpanTwo, yearSpanThree, yearSpanFour, yearSpanFive, yearSpanSix, yearSpanSeven,	yearSpanEight];
 		var datasetMean = [means[0].mean, means[1].mean, means[2].mean, means[3].mean, means[4].mean, means[5].mean, means[6].mean, means[7].mean]; 
 		// var dataset = [2.334, 9, 0, 10, 1, 6.1];
